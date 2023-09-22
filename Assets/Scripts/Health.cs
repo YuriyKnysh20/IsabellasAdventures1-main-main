@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip AidKitSound;
     [SerializeField] private AudioClip DeathSound;
     public Action<int, GameObject> OnTakeHit;
+    private LevelSystem levelSystem;
+
     public int CurrentHealth
     {
         get { return health; }
@@ -52,6 +54,14 @@ public class Health : MonoBehaviour
 
         health += bonusHealth;
 
+    }
+    private void LevelSystem_OnLevelChanged(object sender, EventArgs e)
+    {
+        SetHealthBarSize(1f + levelSystem.GetLevelNumber() * .1f);
+    }
+    private void SetHealthBarSize(float healthBarSize)
+    {
+        transform.Find("Health").localScale = new Vector3(.7f * healthBarSize, 1, 1);
     }
     IEnumerator PlayerDie()
     {

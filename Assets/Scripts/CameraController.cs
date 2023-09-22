@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private GameObject player;
-
+    public float far;
 
     void Start()
     {
@@ -14,9 +14,9 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Vector2.Distance(new Vector3(player.transform.position.x, player.transform.position.y, -10), transform.position) > 1)
+        if (Vector2.Distance(new Vector3(player.transform.position.x, player.transform.position.y, -far), transform.position) > 1)
         {
-            transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, player.transform.position.y -0.5f, -10), 0.05f);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, player.transform.position.y +0.5f, -far), 0.1f);
         }
     }
 }

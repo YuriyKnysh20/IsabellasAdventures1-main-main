@@ -26,39 +26,22 @@ public class Arrow : MonoBehaviour
         Destroy(gameObject);
         yield break;
     }
-    /*[SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float force;
-    [SerializeField] private float lifeTime;
-    [SerializeField] private TriggerDamage triggerDamage;
-    private Player player;
-    public float Force
-    {
-        get { return force; }
-        set { force = value; }
-    }
-    public void Destroy(GameObject gameObject)
-    {
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().ReturnArrowToPool(this);
-    }
-    public void SetImpulse(Vector2 direction, float force, int extraDamage, Player player)
-    {
-        this.player = player;
-        triggerDamage.Init(this);
-        triggerDamage.Parent = player.gameObject;
-        triggerDamage.Damage += extraDamage;
-        rb.AddForce(direction * force, ForceMode2D.Impulse);
-        if (force < 0)
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        StartCoroutine(StartLife());
-    }
-    private IEnumerator StartLife()
-    {
-        yield return new WaitForSeconds(lifeTime);
-        Destroy(gameObject);
-        yield break;
-    }*/
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag != "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag != "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
 	
 
