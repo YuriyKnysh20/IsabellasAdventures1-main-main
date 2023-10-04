@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private AudioSource soundSource;
     [SerializeField] private AudioClip WolfDamage;
     [SerializeField] private AudioClip WolfDie;
+    
     public float life;
   
     public void TakeDamage(int amount)

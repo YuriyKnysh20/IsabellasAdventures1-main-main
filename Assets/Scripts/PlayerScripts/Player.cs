@@ -1,14 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Security.Cryptography;
 using System;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] public int _health;
     [SerializeField] private HealthBar healthBar;
+    private int _currentHealth;
     Rigidbody2D rigB;
     Animator anim;
     public GameObject arrow;
@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     public float speed, jump, hp, go;
     public bool isRight, isGrounded, coolDown, canHurt, canShoot, jumpBut;
     private LevelSystem levelSystem;
+    
+    public event UnityAction<int, int> HealthChanged;
    
     void Start()
     {
@@ -204,27 +206,28 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         canShoot = true;
     }
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Hurt" && canHurt == true)
-        {
-            //hp -= other.GetComponent<Damage>().damage;
-            hp -= 20;
-            healthBar.UpdateValue(hp);
-            StartCoroutine(Hurt());
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Hurt" && canHurt == true)
-        {
-            //hp -= other.GetComponent<Damage>().damage;
-            hp -= 20;
-            healthBar.UpdateValue(hp);
-            StartCoroutine(Hurt());
-        }
-    }
+    
+    // private void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     if (other.gameObject.tag == "Hurt" && canHurt == true)
+    //     {
+    //         //hp -= other.GetComponent<Damage>().damage;
+    //         hp -= 20;
+    //         healthBar.UpdateValue(hp);
+    //         StartCoroutine(Hurt());
+    //     }
+    // }
+    //
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.gameObject.tag == "Hurt" && canHurt == true)
+    //     {
+    //         //hp -= other.GetComponent<Damage>().damage;
+    //         hp -= 20;
+    //         healthBar.UpdateValue(hp);
+    //         StartCoroutine(Hurt());
+    //     }
+    // }
 
     IEnumerator Hurt()
     {
@@ -234,14 +237,25 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             canHurt = true;
         }
-        else
+    }
+
+    public void ApplyDamage(int damage)
+    {
+        _currentHealth -= damage;
+        StartCoroutine(Hurt());
+        HealthChanged?.Invoke(_currentHealth, _health);
+        
+        if (_currentHealth <= 0)
         {
+            //_animator.SetBool("DieBow", true);
+            Destroy(gameObject, 0.8f);
             Die();
         }
     }
 
-    void Die()
+    private void Die()
     {
+        StopCoroutine(Hurt());
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }

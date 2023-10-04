@@ -1,14 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Wolf : MonoBehaviour
 {
-    public float hp, speed;
+    [SerializeField] private List<ItemsData> _itemsDatas;
+    [SerializeField] private ItemsData _experience;
+    [SerializeField] private WolfDie _wolfDie;
+    [SerializeField] 
+
+    private ItemsData _itemsData;
+    
+    public float speed;
     public GameObject pl;
     Transform front, down;
     public bool isRight, tow, dow, canHurt;
-    // Start is called before the first frame update
+
     void Start()
     {
         pl = GameObject.FindGameObjectWithTag("Player");
@@ -56,27 +65,31 @@ public class Wolf : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Attack" && canHurt == true)
+        if (other.gameObject.TryGetComponent(out Player player))
         {
-            //hp -= other.GetComponent<Damage>().damage;
-            hp -= 1;
-            StartCoroutine(Hurt());
+            
         }
     }
 
-    IEnumerator Hurt()
+    public GameObject ItemDrop()
     {
-        if (hp > 0)
-        {
-            canHurt = false;
-            yield return new WaitForSeconds(0.1f);
-            canHurt = true;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        int randomIndex = Random.Range(0, _itemsDatas.Count);
+        ItemsData data = _itemsDatas[randomIndex];
+        
+        GameObject item= Instantiate(data.Prefab, transform.position, Quaternion.identity);
+        item.GetComponent<Items>().GetItemId(data.TypeID);
+        item.GetComponent<Items>().Count = data.Value;
+        
+        return item;
+    }
+
+    public GameObject Experiens()
+    {
+        GameObject exp = Instantiate(_experience.Prefab, transform.position, Quaternion.identity);
+        exp.GetComponent<Items>().GetItemId(_experience.TypeID);
+        exp.GetComponent<Items>().Count = _experience.Value;
+        return exp;
     }
 }

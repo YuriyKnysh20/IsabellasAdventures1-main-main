@@ -1,8 +1,10 @@
-﻿using UnityEngine.UI;
+﻿using System;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
+    [SerializeField] private Player _player;
     [SerializeField] private Image health;
     //  [SerializeField] private float delta;
     //  private float healthValue;
@@ -30,6 +32,16 @@ public class HealthBar : MonoBehaviour
     // 	health.fillAmount=healthValue;
     // }
 
+    private void OnEnable()
+    {
+        
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
     public void SetupHealthBar(float maxHealthValue)
     {
         maxValue = maxHealthValue;
@@ -41,6 +53,11 @@ public class HealthBar : MonoBehaviour
     {
         currentHealth = healtValue;
         health.fillAmount = healtValue / maxValue;
+    }
+    
+    public void OnValueChanged(int value, int maxValue)
+    {
+        health.fillAmount = (float)value / maxValue;
     }
 
 }

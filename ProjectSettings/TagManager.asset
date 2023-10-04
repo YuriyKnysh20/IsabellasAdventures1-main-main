@@ -22,10 +22,10 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - items
+  - Enemy
+  - Player
+  - Arrow
   - 
   - 
   - 

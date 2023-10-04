@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class LevelSystem
 {
-    
     public event EventHandler OnExperienceChanged;
     public event EventHandler OnLevelChanged;
 

@@ -6,21 +6,25 @@ using CodeMonkey.Utils;
 
 public class LevelWindow : MonoBehaviour
 {
-    private Text levelText;
-    private Image experienceBarImage;
+    [SerializeField] private Text levelText;
+    [SerializeField] private Image experienceBarImage;
     private LevelSystem levelSystem;
-
-
 
     private void Awake()
     {
-        levelText = transform.Find("levelText").GetComponent<Text>();
-        experienceBarImage = transform.Find("experienceBar").Find("bar").GetComponent<Image>();
+        // levelText = transform.Find("levelText").GetComponent<Text>();
+        // experienceBarImage = transform.Find("experienceBar").Find("bar").GetComponent<Image>();
 
-        transform.Find("experience5Btn").GetComponent<Button_UI>().ClickFunc = () => levelSystem.AddExperience(5);
-        transform.Find("experience50Btn").GetComponent<Button_UI>().ClickFunc = () => levelSystem.AddExperience(50);
-        transform.Find("experience500Btn").GetComponent<Button_UI>().ClickFunc = () => levelSystem.AddExperience(500);
+        // transform.Find("experience5Btn").GetComponent<Button_UI>().ClickFunc = () => levelSystem.AddExperience(5);
+        // transform.Find("experience50Btn").GetComponent<Button_UI>().ClickFunc = () => levelSystem.AddExperience(50);
+        // transform.Find("experience500Btn").GetComponent<Button_UI>().ClickFunc = () => levelSystem.AddExperience(500);
     }
+
+    public void AddExp(int count)
+    {
+        levelSystem.AddExperience(count);
+    }
+    
     private void SetExperienceBarSize(float experienceNormalized)
 
     {
