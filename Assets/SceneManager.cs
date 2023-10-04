@@ -10,7 +10,7 @@ public class MenuSceneManager : MonoBehaviour
     [SerializeField] private Button Exit;
     [SerializeField] private Button Resume;
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         Time.timeScale = 0;
 
@@ -22,7 +22,7 @@ public class MenuSceneManager : MonoBehaviour
     {
        Resume.onClick.RemoveListener(DoResume);
        Exit.onClick.RemoveListener(DoExit);
-    }
+    }*/
 
     public void DoExit()
     {

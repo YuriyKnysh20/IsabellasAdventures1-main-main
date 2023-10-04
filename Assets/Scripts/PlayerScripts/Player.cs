@@ -1,24 +1,65 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Security.Cryptography;
 using System;
+using JetBrains.Annotations;
+
 
 public class Player : MonoBehaviour
 {
+    #region PrivateUnityClasses
+
+    private Rigidbody2D rigB;
+    
+    private Animator anim;
+
+    #endregion
+
+    #region PrivateOwnClasses
+
     [SerializeField] private HealthBar healthBar;
-    Rigidbody2D rigB;
-    Animator anim;
-    public GameObject arrow;
-    //public Image life;
-    public Vector2 move;
-    public Transform groundCheck, shotPlace;
-    public float speed, jump, hp, go;
-    public bool isRight, isGrounded, coolDown, canHurt, canShoot, jumpBut;
+    
+    
     private LevelSystem levelSystem;
-   
+    
+
+    #endregion
+
+    #region PublicUnityClasses
+
+    public GameObject arrow;
+    
+    public Vector2 move;
+    
+    public Transform groundCheck, shotPlace;
+    
+
+    #endregion
+    
+    
+        
+    public delegate void TakeDie();
+    public event TakeDie OnDie;
+
+    public delegate void TakeDamege();
+
+   public event  TakeDamege OnDamage;
+
+    public float speed, jump, hp, go;
+
+    public bool isRight, isGrounded, CoolDown;
+    public bool canHurt, canShoot, jumpBut;
+
+    private void OnEnable()
+    {
+        OnDie += Die;
+    }
+
+    private void OnDisable()
+    {
+        OnDie -= Die;
+    }
+
     void Start()
     {
         rigB = GetComponent<Rigidbody2D>();
@@ -27,7 +68,7 @@ public class Player : MonoBehaviour
         groundCheck = transform.GetChild(0);
         shotPlace = transform.GetChild(1);
         isRight = true;
-        coolDown = false;
+        CoolDown = false;
         canHurt = true;
         canShoot = true;
         hp = 100;
@@ -53,8 +94,7 @@ public class Player : MonoBehaviour
     {
        
         GroundCheck();
-        //coinMeter.text = coin.ToString();
-        //Health();
+        
         if(transform.position.y < -10)
         {
             Die();
@@ -212,12 +252,13 @@ public class Player : MonoBehaviour
             hp -= 20;
             healthBar.UpdateValue(hp);
             StartCoroutine(Hurt());
+            
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Hurt" && canHurt == true)
+        if (other.gameObject.tag == "Hurt" && canHurt)
         {
             //hp -= other.GetComponent<Damage>().damage;
             hp -= 20;
@@ -230,13 +271,16 @@ public class Player : MonoBehaviour
     {
         if (hp > 0)
         {
+            OnDamage.Invoke();
             canHurt = false;
             yield return new WaitForSeconds(0.1f);
             canHurt = true;
+            Debug.LogWarning("Event @Damage");
+
         }
         else
         {
-            Die();
+            OnDie?.Invoke();
         }
     }
 
@@ -244,7 +288,10 @@ public class Player : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        Debug.LogWarning("Event @Die");
     }
+
+    
 }
  
 
