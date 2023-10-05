@@ -1,6 +1,9 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Security.Cryptography;
 using System;
 using UnityEngine.Events;
 
@@ -55,8 +58,7 @@ public class Player : MonoBehaviour
     {
        
         GroundCheck();
-        //coinMeter.text = coin.ToString();
-        //Health();
+        
         if(transform.position.y < -10)
         {
             Die();

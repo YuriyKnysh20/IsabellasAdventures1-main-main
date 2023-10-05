@@ -34,7 +34,3 @@ public BuffType type;
 public float additiveBonus;
 public float multipleBonus;
 }
-public enum BuffType:byte
-{
-	Damage,Force,Armor 
-}

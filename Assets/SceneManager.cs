@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class MenuScene : MonoBehaviour
+public class MenuSceneManager : MonoBehaviour
 {
     [SerializeField] private Button Exit;
     [SerializeField] private Button Resume;
