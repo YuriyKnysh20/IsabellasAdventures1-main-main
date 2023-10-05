@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public int _health;
     [SerializeField] private HealthBar healthBar;
+
     private int _currentHealth;
     Rigidbody2D rigB;
     Animator anim;
@@ -23,7 +24,7 @@ public class Player : MonoBehaviour
     private LevelSystem levelSystem;
     
     public event UnityAction<int, int> HealthChanged;
-   
+
     void Start()
     {
         rigB = GetComponent<Rigidbody2D>();
