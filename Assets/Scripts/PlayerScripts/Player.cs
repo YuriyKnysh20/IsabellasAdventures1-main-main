@@ -1,9 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Security.Cryptography;
 using System;
 using UnityEngine.Events;
 
@@ -237,7 +234,7 @@ public class Player : MonoBehaviour
         if (hp > 0)
         {
             canHurt = false;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.8f);
             canHurt = true;
         }
     }
@@ -245,6 +242,8 @@ public class Player : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         _currentHealth -= damage;
+        
+        //anim.Play();
         StartCoroutine(Hurt());
         HealthChanged?.Invoke(_currentHealth, _health);
         

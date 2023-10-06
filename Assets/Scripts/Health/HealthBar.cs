@@ -34,30 +34,29 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        _player.HealthChanged += OnValueChanged;
     }
 
     private void OnDisable()
     {
-        
+        _player.HealthChanged -= OnValueChanged;
     }
 
-    public void SetupHealthBar(float maxHealthValue)
-    {
-        maxValue = maxHealthValue;
-        currentHealth = maxHealthValue;
-        health.fillAmount = 1;
-    }
+    // public void SetupHealthBar(float maxHealthValue)
+    // {
+    //     maxValue = maxHealthValue;
+    //     currentHealth = maxHealthValue;
+    //     health.fillAmount = 1;
+    // }
+    //
+    // public void UpdateValue(float healtValue)
+    // {
+    //     currentHealth = healtValue;
+    //     health.fillAmount = healtValue / maxValue;
+    // }
 
-    public void UpdateValue(float healtValue)
-    {
-        currentHealth = healtValue;
-        health.fillAmount = healtValue / maxValue;
-    }
-    
-    public void OnValueChanged(int value, int maxValue)
+    private void OnValueChanged(int value, int maxValue)
     {
         health.fillAmount = (float)value / maxValue;
     }
-
 }

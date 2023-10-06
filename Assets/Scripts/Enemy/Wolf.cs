@@ -25,8 +25,7 @@ public class Wolf : MonoBehaviour
         tow = false;
         canHurt = true;
     }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         if (canHurt == false)
@@ -61,14 +60,6 @@ public class Wolf : MonoBehaviour
                 transform.localScale = new Vector2(-1, 1);
                 transform.Translate(-Vector2.right * speed / 100);
             }
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.TryGetComponent(out Player player))
-        {
-            
         }
     }
 
