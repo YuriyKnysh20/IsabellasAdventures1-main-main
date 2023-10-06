@@ -202,6 +202,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec851f1ef069578449a1a6fe14b7b457, type: 2}
   _experience: {fileID: 11400000, guid: fe1ae6eb119253d48973558cdcb6e408, type: 2}
   _wolfDie: {fileID: 6731693555075765423}
+  _itemsData: {fileID: 11400000, guid: fe1ae6eb119253d48973558cdcb6e408, type: 2}
   speed: 3
   pl: {fileID: 0}
   isRight: 0

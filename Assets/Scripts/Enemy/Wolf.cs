@@ -9,7 +9,6 @@ public class Wolf : MonoBehaviour
     [SerializeField] private List<ItemsData> _itemsDatas;
     [SerializeField] private ItemsData _experience;
     [SerializeField] private WolfDie _wolfDie;
-    [SerializeField] 
 
     private ItemsData _itemsData;
     

@@ -32,11 +32,23 @@ namespace PlayerScripts.Spell
         {
             if (_currentMana != 0)
             {
-                var spell = Instantiate(_spell, _castPos.position, Quaternion.identity);
+                var spell = CreateSpell();
                 _currentMana -= spell.ManaSpell;
                 ManaChanged?.Invoke(_currentMana, _maxManaPlayer);
                 ManaTextChanged?.Invoke(_currentMana, _maxManaPlayer);
             }            
-        } 
+        }
+
+        private BaseSpell CreateSpell()
+        {
+            if (transform.localScale.x == 1)
+            {
+                var spell = Instantiate(_spell, _castPos.position, Quaternion.Euler(0, 0, 0));
+                return spell;
+            }
+
+            Instantiate(_spell, _castPos.position, Quaternion.Euler(0, 180, 0));
+            return _spell;
+        }
     }
 }
