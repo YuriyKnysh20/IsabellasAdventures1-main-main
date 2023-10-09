@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     Rigidbody2D rigB;
     Animator anim;
     public GameObject arrow;
-    //public Image life;
     public Vector2 move;
     public Transform groundCheck, shotPlace;
     public float speed, jump, hp, go;
@@ -26,7 +25,6 @@ public class Player : MonoBehaviour
     {
         rigB = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-       // life = GameObject.FindObjectOfType<Canvas>().transform.Find("HealthBar").GetChild(0).GetComponent<Image>();
         groundCheck = transform.GetChild(0);
         shotPlace = transform.GetChild(1);
         isRight = true;
@@ -35,24 +33,26 @@ public class Player : MonoBehaviour
         canShoot = true;
         hp = 100;
         go = 0;
-       // life = transform.GetChild(3).Find("LifeBar").GetComponent<Image>();
     }
+    
     public void SetLevelSystem(LevelSystem levelSystem)
     {
         this.levelSystem = levelSystem;
 
         levelSystem.OnLevelChanged += LevelSystem_OnLevelChanged;
     }
+    
     private void LevelSystem_OnLevelChanged(object sender, EventArgs e)
     {
         SetHealthBarSize(1f + levelSystem.GetLevelNumber() * .1f);
     }
+    
     private void SetHealthBarSize(float healthBarSize)
     {
         transform.Find("Health").localScale = new Vector3(.7f * healthBarSize, 1, 1);
     }
+    
     private void FixedUpdate()
-       
     {
        
         GroundCheck();
@@ -172,7 +172,7 @@ public class Player : MonoBehaviour
 
     void GroundCheck()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, LayerMask.GetMask("Ground"));
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 1f, LayerMask.GetMask("Ground"));
         //isWalled = Physics2D.OverlapCapsule(wallCheck.position, new Vector2(1f, 2f), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Ground"));
     }
 
@@ -190,15 +190,8 @@ public class Player : MonoBehaviour
 
     public void Shoot()
     {
-        //arrow.GetComponent<TriggerDamage>().parent = gameObject;
-        if (transform.localScale.x == 1)
-        {
-            Instantiate(arrow, shotPlace.position, Quaternion.Euler(0, 0, 0));
-        }
-        else
-        {
-            Instantiate(arrow, shotPlace.position, Quaternion.Euler(0, 180, 0));
-        }
+        Instantiate(arrow, shotPlace.position,
+            transform.localScale.x == 1 ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0));
     }
 
     IEnumerator ShootCoolDown()
