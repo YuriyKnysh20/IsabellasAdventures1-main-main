@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using Script.Enemy.EnemyWithDamage;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour
@@ -27,11 +29,11 @@ public class Arrow : MonoBehaviour
         yield break;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.TryGetComponent(out WolfDie wolfDie))
+        if (other.gameObject.TryGetComponent(out EnemyWithDamage enemy))
         {
-            wolfDie.TakeDamage(_damage);
+            enemy.TakeDamage(_damage);
             Destroy(gameObject);
         }
     }

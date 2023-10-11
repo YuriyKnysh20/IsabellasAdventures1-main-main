@@ -2,12 +2,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using PlayerScripts;
 using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] public int _health;
-    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private HealthPlayer healthBar;
 
     private int _currentHealth;
     Rigidbody2D rigB;
@@ -18,8 +19,9 @@ public class Player : MonoBehaviour
     public float speed, jump, hp, go;
     public bool isRight, isGrounded, coolDown, canHurt, canShoot, jumpBut;
     private LevelSystem levelSystem;
-    
+
     public event UnityAction<int, int> HealthChanged;
+    public event UnityAction<int, int> HealthTextChanged;
 
     void Start()
     {
@@ -33,34 +35,37 @@ public class Player : MonoBehaviour
         canShoot = true;
         hp = 100;
         go = 0;
+        _currentHealth = _health;
+        HealthTextChanged?.Invoke(_currentHealth, _health);
     }
-    
+
     public void SetLevelSystem(LevelSystem levelSystem)
     {
         this.levelSystem = levelSystem;
 
         levelSystem.OnLevelChanged += LevelSystem_OnLevelChanged;
     }
-    
+
     private void LevelSystem_OnLevelChanged(object sender, EventArgs e)
     {
         SetHealthBarSize(1f + levelSystem.GetLevelNumber() * .1f);
     }
-    
+
     private void SetHealthBarSize(float healthBarSize)
     {
         transform.Find("Health").localScale = new Vector3(.7f * healthBarSize, 1, 1);
     }
-    
+
     private void FixedUpdate()
+
     {
-       
         GroundCheck();
-        
-        if(transform.position.y < -10)
+
+        if (transform.position.y < -10)
         {
             Die();
         }
+
         if (canHurt == false)
         {
             GetComponent<SpriteRenderer>().color = Color.red;
@@ -69,6 +74,7 @@ public class Player : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.white;
         }
+
         Go();
         Jump();
     }
@@ -119,7 +125,6 @@ public class Player : MonoBehaviour
             else
             {
                 rigB.velocity = new Vector2(speed * 1.2f * go, rigB.velocity.y);
-
             }
         }
         else
@@ -127,6 +132,7 @@ public class Player : MonoBehaviour
             rigB.velocity = new Vector2(0, 0);
         }
     }
+
     public bool j;
     public int jit = 0;
 
@@ -134,6 +140,7 @@ public class Player : MonoBehaviour
     {
         jumpBut = true;
     }
+
     public void JButUp()
     {
         jumpBut = false;
@@ -172,7 +179,7 @@ public class Player : MonoBehaviour
 
     void GroundCheck()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 1f, LayerMask.GetMask("Ground"));
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, LayerMask.GetMask("Ground"));
         //isWalled = Physics2D.OverlapCapsule(wallCheck.position, new Vector2(1f, 2f), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Ground"));
     }
 
@@ -190,8 +197,15 @@ public class Player : MonoBehaviour
 
     public void Shoot()
     {
-        Instantiate(arrow, shotPlace.position,
-            transform.localScale.x == 1 ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0));
+        //arrow.GetComponent<TriggerDamage>().parent = gameObject;
+        if (transform.localScale.x == 1)
+        {
+            Instantiate(arrow, shotPlace.position, Quaternion.Euler(0, 0, 0));
+        }
+        else
+        {
+            Instantiate(arrow, shotPlace.position, Quaternion.Euler(0, 180, 0));
+        }
     }
 
     IEnumerator ShootCoolDown()
@@ -199,7 +213,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         canShoot = true;
     }
-    
+
     // private void OnCollisionEnter2D(Collision2D other)
     // {
     //     if (other.gameObject.tag == "Hurt" && canHurt == true)
@@ -235,11 +249,12 @@ public class Player : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         _currentHealth -= damage;
-        
+
         //anim.Play();
         StartCoroutine(Hurt());
         HealthChanged?.Invoke(_currentHealth, _health);
-        
+        HealthTextChanged?.Invoke(_currentHealth, _health);
+
         if (_currentHealth <= 0)
         {
             //_animator.SetBool("DieBow", true);
@@ -255,11 +270,3 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 }
- 
-
- 
- 
-   
-
-	
- 

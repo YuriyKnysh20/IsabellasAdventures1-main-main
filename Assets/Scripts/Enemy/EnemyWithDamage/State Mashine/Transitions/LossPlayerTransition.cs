@@ -1,33 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Enemy.EnemyWithDamage.State_Mashine.Transitions
+public class LossPlayerTransition : Transition
 {
-    public class LossPlayerTransition : Transition
+    public LayerMask playerLayer;
+    public float attackDistance;
+
+    private float distance;
+
+    public void Update()
     {
-        public LayerMask playerLayer;
-        public float attackDistance;
+        RaycastHit2D hitRight = Physics2D.Raycast(transform.position, transform.right, attackDistance, playerLayer);
+        RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, -transform.right, attackDistance, playerLayer);
 
-        private float distance;
+        Debug.DrawRay(transform.position, transform.right * attackDistance, Color.red);
+        Debug.DrawRay(transform.position, -transform.right * attackDistance, Color.red);
 
-        public void Update()
+        distance = Vector2.Distance(transform.position, Target.transform.position);
+
+        if (hitRight.collider != null || hitLeft.collider != null)
         {
-            RaycastHit2D hitRight = Physics2D.Raycast(transform.position, transform.right, attackDistance, playerLayer);
-            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, -transform.right, attackDistance, playerLayer);
+            Debug.Log("Игрок" + hitRight.collider);
+            Debug.Log("Игрок" + hitLeft.collider);
 
-            Debug.DrawRay(transform.position, transform.right * attackDistance, Color.red);
-            Debug.DrawRay(transform.position, -transform.right * attackDistance, Color.red);
-
-            distance = Vector2.Distance(transform.position, Target.transform.position);
-
-            if (hitRight.collider != null || hitLeft.collider != null)
+            if (distance > attackDistance)
             {
-                Debug.Log("Игрок" + hitRight.collider);
-                Debug.Log("Игрок" + hitLeft.collider);
-
-                if (distance > attackDistance)
-                {
-                    NeedTransit = true;
-                }
+                NeedTransit = true;
             }
         }
     }

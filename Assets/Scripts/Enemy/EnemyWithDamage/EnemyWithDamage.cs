@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Enemy.EnemyWithDamage
+namespace Script.Enemy.EnemyWithDamage
 {
     public class EnemyWithDamage : MonoBehaviour
     {
@@ -13,8 +13,6 @@ namespace Enemy.EnemyWithDamage
 
         private Animator _animator;
         private int _currentHealth;
-
-        public GameObject coin;
         public Player Target => _target;
         public event UnityAction<int, int> EnemyHealthCheanged;
 
@@ -32,11 +30,10 @@ namespace Enemy.EnemyWithDamage
 
             if (_currentHealth <= 0)
             {
-                //_animator.SetTrigger("Die");
+                Experience();
                 ItemDrop();
-                Experiens();
 
-                Destroy(gameObject, 0.8f);
+                Destroy(gameObject, 0.3f);
             }
         }
 
@@ -52,7 +49,7 @@ namespace Enemy.EnemyWithDamage
             return item;
         }
 
-        private GameObject Experiens()
+        private GameObject Experience()
         {
             GameObject exp = Instantiate(_experience.Prefab, transform.position, Quaternion.identity);
             exp.GetComponent<Items>().GetItemId(_experience.TypeID);

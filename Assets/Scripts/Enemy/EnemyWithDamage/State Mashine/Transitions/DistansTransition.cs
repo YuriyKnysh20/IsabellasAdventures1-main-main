@@ -1,23 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Enemy.EnemyWithDamage.State_Mashine.Transitions
+public class DistansTransition : Transition
 {
-    public class DistansTransition : Transition
+    [SerializeField] private float _transitionRange;
+    [SerializeField] private float _rangetSpread;
+
+    private void Start()
     {
-        [SerializeField] private float _transitionRange;
-        [SerializeField] private float _rangetSpread;
+        _transitionRange += Random.Range(-_rangetSpread, _rangetSpread);
+    }
 
-        private void Start()
+    private void Update()
+    {
+        if (Vector2.Distance(transform.position, Target.transform.position) < _transitionRange)
         {
-            _transitionRange += Random.Range(-_rangetSpread, _rangetSpread);
-        }
-
-        private void Update()
-        {
-            if (Vector2.Distance(transform.position, Target.transform.position) < _transitionRange)
-            {
-                NeedTransit = true;
-            }
+            NeedTransit = true;
         }
     }
 }

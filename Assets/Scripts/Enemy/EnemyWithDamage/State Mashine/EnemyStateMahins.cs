@@ -1,49 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
+using Script.Enemy.EnemyWithDamage;
 using UnityEngine;
 
-namespace Enemy.EnemyWithDamage.State_Mashine
+public class EnemyStateMahins : MonoBehaviour
 {
-    public class EnemyStateMahins : MonoBehaviour
+    [SerializeField] private State _firstState;
+
+    private Player _target;
+    private State _currentState;
+
+    public State Current => _currentState;
+
+    private void Start()
     {
-        [SerializeField] private State _firstState;
+        _target = GetComponent<EnemyWithDamage>().Target;
+        Reset(_firstState);
+    }
 
-        private Player _target;
-        private State _currentState;
+    private void Update()
+    {
+        if (_currentState == null)
+            return;
 
-        public State Current => _currentState;
+        var nextState = _currentState.GetNextState();
+        if (nextState != null)
+            Transit(nextState);
+    }
 
-        private void Start()
-        {
-            _target = GetComponent<EnemyWithDamage>().Target;
-            Reset(_firstState);
-        }
+    private void Reset(State startState)
+    {
+        _currentState = startState;
 
-        private void Update()
-        {
-            if (_currentState == null)
-                return;
+        if (_currentState != null)
+            _currentState.Enter(_target);
+    }
 
-            var nextState = _currentState.GetNextState();
-            if (nextState != null)
-                Transit(nextState);
-        }
+    private void Transit(State nextState)
+    {
+        if (_currentState != null)
+            _currentState.Exit();
 
-        private void Reset(State startState)
-        {
-            _currentState = startState;
+        _currentState = nextState;
 
-            if (_currentState != null)
-                _currentState.Enter(_target);
-        }
-
-        private void Transit(State nextState)
-        {
-            if (_currentState != null)
-                _currentState.Exit();
-
-            _currentState = nextState;
-
-            if (_currentState != null)
-                _currentState.Enter(_target);
-        }
+        if (_currentState != null)
+            _currentState.Enter(_target);
     }
 }

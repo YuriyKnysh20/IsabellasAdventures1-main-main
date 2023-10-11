@@ -75,7 +75,7 @@ public class Wolf : MonoBehaviour
         return item;
     }
 
-    public GameObject Experiens()
+    public GameObject Experience()
     {
         GameObject exp = Instantiate(_experience.Prefab, transform.position, Quaternion.identity);
         exp.GetComponent<Items>().GetItemId(_experience.TypeID);

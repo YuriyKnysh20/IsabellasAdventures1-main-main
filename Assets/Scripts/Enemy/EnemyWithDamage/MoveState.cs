@@ -1,46 +1,44 @@
-using Enemy.EnemyWithDamage.State_Mashine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Enemy.EnemyWithDamage
+[RequireComponent(typeof(Animator))]
+public class MoveState : State
 {
-    [RequireComponent(typeof(Animator))]
-    public class MoveState : State
+    [SerializeField] private float _speed;
+
+    private int _move;
+
+    public Transform targetPlayer;
+    public bool isFlipped = true;
+
+    private void Update()
     {
-        [SerializeField] private float _speed;
+        Move();
+        //LookAtPlayer();
+    }
 
-        private int _move;
+    public void Move()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, _speed * Time.deltaTime);
+    }
 
-        public Transform targetPlayer;
-        public bool isFlipped = true;
+    private void Reflect(int move)
+    {
+        transform.localScale = new Vector3(move, 1, 1);
+    }
 
-        private void Update()
+    public void LookAtPlayer()
+    {
+        if (transform.position.x > targetPlayer.position.x && !isFlipped)
         {
-            Move();
-            LookAtPlayer();
+            Reflect(_move);
+            isFlipped = false;
         }
-
-        private void Move()
+        else if (transform.position.x < targetPlayer.position.x && isFlipped)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, _speed * Time.deltaTime);
-        }
-
-        private void LookAtPlayer()
-        {
-            if (transform.position.x > targetPlayer.position.x && isFlipped)
-            {
-                Reflect(_move);
-                isFlipped = true;
-            }
-            else if (transform.position.x < targetPlayer.position.x && !isFlipped)
-            {
-                Reflect(-_move);
-                isFlipped = false;
-            }
-        }
-
-        private void Reflect(int move)
-        {
-            transform.localScale = new Vector3(move, 1, 1);
+            Reflect(-_move);
+            isFlipped = true;
         }
     }
 }
