@@ -49,7 +49,4 @@ public class LevelWindow : MonoBehaviour
         SetExperienceBarSize(levelSystem.GetExperienceNormalized());
 
     }
-
-
-    
 }
