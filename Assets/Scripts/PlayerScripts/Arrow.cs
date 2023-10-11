@@ -37,15 +37,6 @@ public class Arrow : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (other.gameObject.TryGetComponent(out EnemyWithDamage enemy))
-    //     {
-    //         enemy.TakeDamage(_damage);
-    //         Destroy(gameObject);
-    //     }
-    // }
 }
 	
 
