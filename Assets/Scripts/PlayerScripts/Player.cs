@@ -2,31 +2,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using PlayerScripts;
 using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] public int _health;
-    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private HealthPlayer healthBar;
 
     private int _currentHealth;
     Rigidbody2D rigB;
     Animator anim;
     public GameObject arrow;
-    //public Image life;
     public Vector2 move;
     public Transform groundCheck, shotPlace;
     public float speed, jump, hp, go;
     public bool isRight, isGrounded, coolDown, canHurt, canShoot, jumpBut;
     private LevelSystem levelSystem;
-    
+
     public event UnityAction<int, int> HealthChanged;
+    public event UnityAction<int, int> HealthTextChanged;
 
     void Start()
     {
         rigB = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-       // life = GameObject.FindObjectOfType<Canvas>().transform.Find("HealthBar").GetChild(0).GetComponent<Image>();
         groundCheck = transform.GetChild(0);
         shotPlace = transform.GetChild(1);
         isRight = true;
@@ -35,32 +35,37 @@ public class Player : MonoBehaviour
         canShoot = true;
         hp = 100;
         go = 0;
-       // life = transform.GetChild(3).Find("LifeBar").GetComponent<Image>();
+        _currentHealth = _health;
+        HealthTextChanged?.Invoke(_currentHealth, _health);
     }
+
     public void SetLevelSystem(LevelSystem levelSystem)
     {
         this.levelSystem = levelSystem;
 
         levelSystem.OnLevelChanged += LevelSystem_OnLevelChanged;
     }
+
     private void LevelSystem_OnLevelChanged(object sender, EventArgs e)
     {
         SetHealthBarSize(1f + levelSystem.GetLevelNumber() * .1f);
     }
+
     private void SetHealthBarSize(float healthBarSize)
     {
         transform.Find("Health").localScale = new Vector3(.7f * healthBarSize, 1, 1);
     }
+
     private void FixedUpdate()
-       
+
     {
-       
         GroundCheck();
-        
-        if(transform.position.y < -10)
+
+        if (transform.position.y < -10)
         {
             Die();
         }
+
         if (canHurt == false)
         {
             GetComponent<SpriteRenderer>().color = Color.red;
@@ -69,6 +74,7 @@ public class Player : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.white;
         }
+
         Go();
         Jump();
     }
@@ -119,7 +125,6 @@ public class Player : MonoBehaviour
             else
             {
                 rigB.velocity = new Vector2(speed * 1.2f * go, rigB.velocity.y);
-
             }
         }
         else
@@ -127,6 +132,7 @@ public class Player : MonoBehaviour
             rigB.velocity = new Vector2(0, 0);
         }
     }
+
     public bool j;
     public int jit = 0;
 
@@ -134,6 +140,7 @@ public class Player : MonoBehaviour
     {
         jumpBut = true;
     }
+
     public void JButUp()
     {
         jumpBut = false;
@@ -206,7 +213,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         canShoot = true;
     }
-    
+
     // private void OnCollisionEnter2D(Collision2D other)
     // {
     //     if (other.gameObject.tag == "Hurt" && canHurt == true)
@@ -242,11 +249,12 @@ public class Player : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         _currentHealth -= damage;
-        
+
         //anim.Play();
         StartCoroutine(Hurt());
         HealthChanged?.Invoke(_currentHealth, _health);
-        
+        HealthTextChanged?.Invoke(_currentHealth, _health);
+
         if (_currentHealth <= 0)
         {
             //_animator.SetBool("DieBow", true);
@@ -262,11 +270,3 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 }
- 
-
- 
- 
-   
-
-	
- 

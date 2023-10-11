@@ -29,7 +29,7 @@ public class WolfDie : MonoBehaviour
         if (_enemyHealth <= 0)
         {
             _wolf.ItemDrop();
-            _wolf.Experiens();
+            _wolf.Experience();
             Die();
             //PlaySlashAudio();
         }
