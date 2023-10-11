@@ -21,8 +21,8 @@ public class LossPlayerTransition : Transition
 
         if (hitRight.collider != null || hitLeft.collider != null)
         {
-            Debug.Log("Игрок" + hitRight.collider);
-            Debug.Log("Игрок" + hitLeft.collider);
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅ" + hitRight.collider);
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅ" + hitLeft.collider);
 
             if (distance > attackDistance)
             {
