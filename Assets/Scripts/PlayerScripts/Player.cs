@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     {
         GroundCheck();
 
-        if (transform.position.y < -10)
+        if (transform.position.y < -15)
         {
             Die();
         }
@@ -268,5 +268,6 @@ public class Player : MonoBehaviour
         StopCoroutine(Hurt());
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        print("Die");
     }
 }
