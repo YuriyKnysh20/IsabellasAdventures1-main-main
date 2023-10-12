@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f108ef12-809e-4773-a69b-1473c0c38d1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Forest.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Forest.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IMG_0528.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMG_0528.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Paper.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Paper.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/White_1x1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/White_1x1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/White_1x1.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/White_1x1.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_3.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_3.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_4.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_4.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_5.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_5.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_6.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level_6.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +107,7 @@
       <workItem from="1696325150142" duration="11472000" />
       <workItem from="1696449453879" duration="196000" />
       <workItem from="1696450687708" duration="311000" />
-      <workItem from="1697111212956" duration="606000" />
+      <workItem from="1697111212956" duration="1266000" />
     </task>
     <servers />
   </component>
