@@ -9,6 +9,10 @@ public class UICharacterController : MonoBehaviour
 	[SerializeField] private PressedButton right;
 	[SerializeField] private Button fire;
 
+	void Start()
+	{
+		Player.Instance.InitUIController(this);	
+	}
 
 	public PressedButton Left
 	{
@@ -19,16 +23,9 @@ public class UICharacterController : MonoBehaviour
 	{
 		get { return right; }
 	}
+
 	public Button Fire
 	{
 		get { return fire; }
 	}
-
-	void Start()
-	{
-		//Player.Instance.InitUIController(this);	
-	}
-
-
-
 }

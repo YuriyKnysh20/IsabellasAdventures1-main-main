@@ -19,7 +19,9 @@ public class Player : MonoBehaviour
     public float speed, jump, hp, go;
     public bool isRight, isGrounded, coolDown, canHurt, canShoot, jumpBut;
     private LevelSystem levelSystem;
+    private UICharacterController controller;
 
+    public static Player Instance { get; set; }
     public event UnityAction<int, int> HealthChanged;
     public event UnityAction<int, int> HealthTextChanged;
 
@@ -37,6 +39,16 @@ public class Player : MonoBehaviour
         go = 0;
         _currentHealth = _health;
         HealthTextChanged?.Invoke(_currentHealth, _health);
+    }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void InitUIController(UICharacterController uiController)
+    {
+        controller = uiController;
     }
 
     public void SetLevelSystem(LevelSystem levelSystem)
@@ -57,10 +69,7 @@ public class Player : MonoBehaviour
     }
 
     private void FixedUpdate()
-
     {
-        GroundCheck();
-
         if (transform.position.y < -15)
         {
             Die();
@@ -75,8 +84,47 @@ public class Player : MonoBehaviour
             GetComponent<SpriteRenderer>().color = Color.white;
         }
 
-        Go();
+        //Go();
+        Move();
         Jump();
+        anim.SetFloat("Speed",Mathf.Abs(move.x));
+        
+        GroundCheck();
+    }
+
+    private void Move()
+    {
+        move = Vector3.zero;
+#if UNITY_EDITOR
+        if (Input.GetKey(KeyCode.A))
+        {
+            move = Vector3.left;
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            move = Vector3.right;
+        }
+#endif
+
+        if (controller.Left.IsPressed)
+        {
+            move = Vector3.left;
+        }
+
+        if (controller.Right.IsPressed)
+        {
+            move = Vector3.right;
+        }
+        
+        move *= speed;
+        move.y = rigB.velocity.y;
+        rigB.velocity = move;
+
+        if (move.x > 0)
+            transform.localScale = new Vector2(1, 1);
+        if (move.x < 0)
+            transform.localScale = new Vector2(-1, 1);
     }
 
     public void MoveLeft()
@@ -107,6 +155,7 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("Go", true);
         }
+
 #if UNITY_EDITOR
         go = Input.GetAxis("Horizontal");
         if (Input.GetAxis("Horizontal") > 0)
@@ -149,6 +198,7 @@ public class Player : MonoBehaviour
     void Jump()
     {
         anim.SetBool("isGrounded", isGrounded);
+
         if (jumpBut == true)
         {
             if (isGrounded)
