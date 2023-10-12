@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -7,9 +8,7 @@ public class SwitchLevel : MonoBehaviour
 {
     [Header("Выбор типа ввода") ] [Tooltip("При выборе одного типа ввода - игнорируется другой")]
     [SerializeField] private Chooseinput _inputSelection;
-
     
-
     
     [Space(3)]
     [Header("Поля для ввода")]
@@ -20,9 +19,10 @@ public class SwitchLevel : MonoBehaviour
 
     private void Start()
     {
-        _button = GetComponent<Button>();
+        _button ??= GetComponent<Button>();
+        _button.onClick.AddListener(Switch);
     }
-
+    
     public void Switch()
     {
         if (_inputSelection == Chooseinput.inputString)
@@ -36,7 +36,6 @@ public class SwitchLevel : MonoBehaviour
             SceneManager.LoadScene(_sceneIndex);
             Debug.Log("Index");
         }
-
     }
 }
 
