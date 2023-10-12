@@ -9,7 +9,7 @@ public class DistansTransition : Transition
 
     private void Start()
     {
-        _transitionRange += Random.Range(-_rangetSpread, _rangetSpread);
+        //_transitionRange += Random.Range(-_rangetSpread, _rangetSpread);
     }
 
     private void Update()

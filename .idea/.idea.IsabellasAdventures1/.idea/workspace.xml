@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8f4b074f-0110-48b9-9c76-addb63b67f85" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Plant/ShootingPlant.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Plant/ShootingPlant.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Enemy/Biting.Anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Enemy/Biting.Anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Enemy/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Enemy/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Enemy/Walking.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Enemy/Walking.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Arrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Spell/BaseSpell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Spell/BaseSpell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transitions/DistansTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transitions/DistansTransition.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,64 +24,6 @@
     <setting file="file://$PROJECT_DIR$/../Catxorcizm/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Catxorcizm/Assets/CodeBase/Infrastructure/Service/StaticData/StaticDataService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Catxorcizm/Assets/CodeBase/Infrastructure/StaticData/TowerStaticData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/Faerboll.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/Faerboll.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/Faerboll.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/Faerboll.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/Health.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/Health.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/Health.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/Health.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/arrow.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/arrow.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/arrow.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/arrow.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/expirian.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/expirian.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/expirian.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/expirian.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/money.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Items/money.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/Faerboll.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/Faerboll.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/Faerboll.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/Faerboll.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/Health.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/Health.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/Health.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/Health.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/expirian.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/expirian.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/expirian.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/expirian.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/money.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/money.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/money.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Player/money.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Wolf.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Prefabs/Wolf.prefab.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/AttackState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/AttackState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/EnemyWithDamage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/EnemyWithDamage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/MoveState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/MoveState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/PatrolState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/PatrolState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/EnemyStateMahins.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/EnemyStateMahins.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/State.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/State.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transitions/DistansPlayerTransition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transitions/DistansPlayerTransition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transitions/DistansTransition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transitions/DistansTransition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transitions/LossPlayerTransition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/stud Unity/game Git/IsabellasAdventures1/Assets/Scripts/Enemy/EnemyWithDamage/State Mashine/Transitions/LossPlayerTransition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemsDrops/ItemsData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemsDrops/MoneyBalance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../MyGame/Assets/Script/Enemy/EnemyWithDamage/AttackState.cs" root0="SKIP_HIGHLIGHTING" />
@@ -168,6 +102,7 @@
       <workItem from="1696427005385" duration="160000" />
       <workItem from="1696427244156" duration="14727000" />
       <workItem from="1696531469144" duration="6297000" />
+      <workItem from="1697103559412" duration="4541000" />
     </task>
     <servers />
   </component>
