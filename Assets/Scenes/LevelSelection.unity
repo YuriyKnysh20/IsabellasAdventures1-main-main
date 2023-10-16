@@ -907,6 +907,11 @@ PrefabInstance:
       propertyPath: _sceneIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 389392084624159933, guid: aa5d263311766794ba3c278e092ae6f3,
+        type: 3}
+      propertyPath: _inputSelection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3161905922859744607, guid: aa5d263311766794ba3c278e092ae6f3,
         type: 3}
       propertyPath: m_Pivot.x
