@@ -24,7 +24,7 @@ public class Lore : MonoBehaviour
 
         if (index >= lore.Length)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
 
         else
