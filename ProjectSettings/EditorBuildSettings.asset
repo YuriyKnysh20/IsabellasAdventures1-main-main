@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Field_2.unity
     guid: 9a5dc18a3e7c59141b1530578cb2648f
   - enabled: 1
-    path: Assets/Scenes/Level 3.unity
+    path: Assets/Scenes/Level 1.unity
     guid: b1b262458e0cffd48acb7920c7f4fae8
   - enabled: 1
     path: Assets/Scenes/Level_4Autumn.unity

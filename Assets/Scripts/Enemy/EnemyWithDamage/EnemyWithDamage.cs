@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace Script.Enemy.EnemyWithDamage
 {
@@ -15,6 +17,12 @@ namespace Script.Enemy.EnemyWithDamage
         private int _currentHealth;
         public Player Target => _target;
         public event UnityAction<int, int> EnemyHealthCheanged;
+        public event UnityAction<int, int> EnemyHealthTextChanged;
+
+        private void Start()
+        {
+            EnemyHealthTextChanged?.Invoke(_currentHealth, _health);
+        }
 
         private void Awake()
         {
@@ -27,6 +35,7 @@ namespace Script.Enemy.EnemyWithDamage
             _currentHealth -= damage;
 
             EnemyHealthCheanged?.Invoke(_currentHealth, _health);
+            EnemyHealthTextChanged?.Invoke(_currentHealth, _health);
 
             if (_currentHealth <= 0)
             {

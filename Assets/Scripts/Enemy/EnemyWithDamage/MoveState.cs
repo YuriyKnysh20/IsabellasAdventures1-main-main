@@ -15,7 +15,7 @@ public class MoveState : State
     private void Update()
     {
         Move();
-        //LookAtPlayer();
+        LookAtPlayer();
     }
 
     public void Move()
@@ -30,15 +30,15 @@ public class MoveState : State
 
     public void LookAtPlayer()
     {
-        if (transform.position.x > targetPlayer.position.x && !isFlipped)
+        if (transform.position.x > targetPlayer.position.x)
         {
-            Reflect(_move);
-            isFlipped = false;
+            //Reflect(-_move);
+            transform.localScale = new Vector2(1, 1);
         }
-        else if (transform.position.x < targetPlayer.position.x && isFlipped)
+        else if (transform.position.x < targetPlayer.position.x)
         {
-            Reflect(-_move);
-            isFlipped = true;
+            //Reflect(_move);
+            transform.localScale = new Vector2(-1, 1);
         }
     }
 }

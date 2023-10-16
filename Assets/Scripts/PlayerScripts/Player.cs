@@ -127,23 +127,6 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
     }
 
-    public void MoveLeft()
-    {
-        go = -1;
-        transform.localScale = new Vector2(-1, 1);
-    }
-
-    public void MoveRight()
-    {
-        go = 1;
-        transform.localScale = new Vector2(1, 1);
-    }
-
-    public void MoveStop()
-    {
-        go = 0;
-    }
-
     private void Go()
     {
         //life.fillAmount = hp / 100;
