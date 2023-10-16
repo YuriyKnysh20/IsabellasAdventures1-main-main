@@ -30,7 +30,7 @@ public class BossPlant : MonoBehaviour
     private void Update()
     {
         range = Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
-        print(range);
+        
         if (canHurt == false)
         {
             GetComponent<SpriteRenderer>().color = Color.red;
