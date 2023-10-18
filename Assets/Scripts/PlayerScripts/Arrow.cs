@@ -6,6 +6,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     [SerializeField] private int _damage;
+    [SerializeField] private float _speedForce;
     
     public int lifeTime;
 
@@ -13,11 +14,11 @@ public class Arrow : MonoBehaviour
     {
         if (transform.rotation.y == 0)
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * 25, ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * _speedForce, ForceMode2D.Impulse);
         }
         else
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.left * 25, ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.left * _speedForce, ForceMode2D.Impulse);
 
         }
         StartCoroutine(LifeTime());
