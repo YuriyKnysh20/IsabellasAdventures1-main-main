@@ -9,9 +9,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public int _health;
     [SerializeField] private HealthPlayer healthBar;
+    [SerializeField] private float damageForce;
+    [SerializeField] private AudioSource soundSource;
+    [SerializeField] private AudioClip ArrowSound;
+    [SerializeField] private AudioClip PlayerDamageWoman;
+    [SerializeField] private AudioClip DeathSound;
 
     private int _currentHealth;
-    Rigidbody2D rigB;
+    Rigidbody2D rigidboby;
     Animator anim;
     public GameObject arrow;
     public Vector2 move;
@@ -27,7 +32,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        rigB = GetComponent<Rigidbody2D>();
+        rigidboby = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         groundCheck = transform.GetChild(0);
         shotPlace = transform.GetChild(1);
@@ -118,8 +123,8 @@ public class Player : MonoBehaviour
         }
         
         move *= speed;
-        move.y = rigB.velocity.y;
-        rigB.velocity = move;
+        move.y = rigidboby.velocity.y;
+        rigidboby.velocity = move;
 
         if (move.x > 0)
             transform.localScale = new Vector2(1, 1);
@@ -152,16 +157,16 @@ public class Player : MonoBehaviour
         {
             if (isGrounded == true)
             {
-                rigB.velocity = new Vector2(speed * go, rigB.velocity.y);
+                rigidboby.velocity = new Vector2(speed * go, rigidboby.velocity.y);
             }
             else
             {
-                rigB.velocity = new Vector2(speed * 1.2f * go, rigB.velocity.y);
+                rigidboby.velocity = new Vector2(speed * 1.2f * go, rigidboby.velocity.y);
             }
         }
         else
         {
-            rigB.velocity = new Vector2(0, 0);
+            rigidboby.velocity = new Vector2(0, 0);
         }
     }
 
@@ -198,10 +203,10 @@ public class Player : MonoBehaviour
         if (j == true)
         {
             //anim.SetBool("Jump", true);
-            if (jit++ < 60 && rigB.velocity.y < 50)
+            if (jit++ < 60 && rigidboby.velocity.y < 50)
             {
                 //rigB.AddForce(Vector2.up * jump / jit);
-                rigB.AddForce(transform.up * jump / jit, ForceMode2D.Impulse);
+                rigidboby.AddForce(transform.up * jump / jit, ForceMode2D.Impulse);
             }
         }
         else
@@ -224,6 +229,7 @@ public class Player : MonoBehaviour
             go = 0;
             canShoot = false;
             anim.SetTrigger("StartShoot");
+            soundSource.PlayOneShot(ArrowSound);
             StartCoroutine(ShootCoolDown());
         }
     }
@@ -284,6 +290,8 @@ public class Player : MonoBehaviour
         _currentHealth -= damage;
 
         //anim.Play();
+        soundSource.PlayOneShot(PlayerDamageWoman);
+
         StartCoroutine(Hurt());
         HealthChanged?.Invoke(_currentHealth, _health);
         HealthTextChanged?.Invoke(_currentHealth, _health);
@@ -291,14 +299,22 @@ public class Player : MonoBehaviour
         if (_currentHealth <= 0)
         {
             //_animator.SetBool("DieBow", true);
-            Destroy(gameObject, 0.8f);
-            Die();
+            StartCoroutine(PlayerDie());
         }
+    }
+    
+    IEnumerator PlayerDie()
+    {
+        soundSource.PlayOneShot(DeathSound);
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject, 0.8f);
+        Die();
     }
 
     private void Die()
     {
         StopCoroutine(Hurt());
+        StopCoroutine(PlayerDie());
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
         print("Die");

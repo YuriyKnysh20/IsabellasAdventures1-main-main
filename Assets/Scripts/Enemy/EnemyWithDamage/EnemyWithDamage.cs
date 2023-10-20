@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +13,10 @@ namespace Script.Enemy.EnemyWithDamage
         [SerializeField] private Player _target;
         [SerializeField] private List<ItemsData> _itemsDatas;
         [SerializeField] private ItemsData _experience;
+        [SerializeField] private AudioSource soundSource;
+        [SerializeField] private AudioClip WolfDamage;
+        [SerializeField] private AudioClip WolfDie;
+        [SerializeField] public float _life;
 
         private Animator _animator;
         private int _currentHealth;
@@ -34,16 +39,26 @@ namespace Script.Enemy.EnemyWithDamage
         {
             _currentHealth -= damage;
 
+            soundSource.PlayOneShot(WolfDamage);
             EnemyHealthCheanged?.Invoke(_currentHealth, _health);
             EnemyHealthTextChanged?.Invoke(_currentHealth, _health);
 
             if (_currentHealth <= 0)
             {
-                Experience();
-                ItemDrop();
-
-                Destroy(gameObject, 0.3f);
+                StartCoroutine(StartDie());
             }
+        }
+        
+        private IEnumerator StartDie()
+        {
+            soundSource.PlayOneShot(WolfDie);
+            yield return new WaitForSeconds(_life);
+
+            Experience();
+            ItemDrop();
+
+            Destroy(gameObject, 0.3f);
+            yield break;
         }
 
         private GameObject ItemDrop()

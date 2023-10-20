@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LossPlayerTransition : Transition
@@ -21,9 +19,6 @@ public class LossPlayerTransition : Transition
 
         if (hitRight.collider != null || hitLeft.collider != null)
         {
-            Debug.Log("Игрок" + hitRight.collider);
-            Debug.Log("Игрок" + hitLeft.collider);
-
             if (distance > attackDistance)
             {
                 NeedTransit = true;

@@ -4,38 +4,53 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-	public Button back;
-	private void Start()
-	{
+    [SerializeField] private Button _back;
+    [SerializeField] private AudioSource _audio;
+    
+    private const string MusicVolume = "MusicVolume";
 
-	}
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey(MusicVolume))
+        {
+            _audio.volume = 1;
+        }
+        else
+            _audio.volume = PlayerPrefs.GetFloat(MusicVolume);
 
-	public void LoadCharacterChoiceScreen()
+        _audio.Play();
+    }
+    
+    private void Update()
+        => _audio.volume = PlayerPrefs.GetFloat(MusicVolume);
+
+    public void LoadCharacterChoiceScreen()
     {
         //characterScreen.SetActive(true);
         SceneManager.LoadScene(1);
     }
 
-	public void LoadCharacterScreen()
+    public void LoadCharacterScreen()
     {
-
     }
 
     public void LoadTo(int level)
     {
         SceneManager.LoadScene(level);
     }
+
     public void Back()
     {
-		back.interactable = true;
+        _back.interactable = true;
     }
- public void OnClickPlay()
- {
- SceneManager.LoadScene(1);
- }
- public void OnClickExit()
- {
- Application.Quit();
- }
-	
+
+    public void OnClickPlay()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void OnClickExit()
+    {
+        Application.Quit();
+    }
 }
