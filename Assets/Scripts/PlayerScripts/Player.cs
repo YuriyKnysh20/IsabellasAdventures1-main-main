@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip DeathSound;
 
     private int _currentHealth;
-    Rigidbody2D rigidboby;
-    Animator anim;
+    private Rigidbody2D rigidboby;
+    private Animator anim;
     public GameObject arrow;
     public Vector2 move;
     public Transform groundCheck, shotPlace;
@@ -236,7 +236,6 @@ public class Player : MonoBehaviour
 
     public void Shoot()
     {
-        //arrow.GetComponent<TriggerDamage>().parent = gameObject;
         if (transform.localScale.x == 1)
         {
             Instantiate(arrow, shotPlace.position, Quaternion.Euler(0, 0, 0));
@@ -252,28 +251,6 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         canShoot = true;
     }
-
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (other.gameObject.tag == "Hurt" && canHurt == true)
-    //     {
-    //         //hp -= other.GetComponent<Damage>().damage;
-    //         hp -= 20;
-    //         healthBar.UpdateValue(hp);
-    //         StartCoroutine(Hurt());
-    //     }
-    // }
-    //
-    // private void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (other.gameObject.tag == "Hurt" && canHurt == true)
-    //     {
-    //         //hp -= other.GetComponent<Damage>().damage;
-    //         hp -= 20;
-    //         healthBar.UpdateValue(hp);
-    //         StartCoroutine(Hurt());
-    //     }
-    // }
 
     IEnumerator Hurt()
     {
