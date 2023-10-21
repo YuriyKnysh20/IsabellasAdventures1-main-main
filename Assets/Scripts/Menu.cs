@@ -5,24 +5,6 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private Button _back;
-    [SerializeField] private AudioSource _audio;
-    
-    private const string MusicVolume = "MusicVolume";
-
-    private void Start()
-    {
-        if (!PlayerPrefs.HasKey(MusicVolume))
-        {
-            _audio.volume = 1;
-        }
-        else
-            _audio.volume = PlayerPrefs.GetFloat(MusicVolume);
-
-        _audio.Play();
-    }
-    
-    private void Update()
-        => _audio.volume = PlayerPrefs.GetFloat(MusicVolume);
 
     public void LoadCharacterChoiceScreen()
     {
