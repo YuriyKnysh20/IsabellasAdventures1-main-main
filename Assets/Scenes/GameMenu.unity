@@ -4734,7 +4734,7 @@ PrefabInstance:
     - target: {fileID: 3931217139786888605, guid: 4b86f3019f048084ca8fc72a53521657,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -216
+      value: -213.1
       objectReference: {fileID: 0}
     - target: {fileID: 3931217139786888605, guid: 4b86f3019f048084ca8fc72a53521657,
         type: 3}
@@ -4781,6 +4781,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 34878392}
+    - target: {fileID: 8396332162501433888, guid: 4b86f3019f048084ca8fc72a53521657,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMusic
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
