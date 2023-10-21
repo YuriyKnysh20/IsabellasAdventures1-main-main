@@ -283,7 +283,7 @@ public class Player : MonoBehaviour
     IEnumerator PlayerDie()
     {
         soundSource.PlayOneShot(DeathSound);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject, 0.8f);
         Die();
     }
