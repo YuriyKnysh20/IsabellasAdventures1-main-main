@@ -7,7 +7,7 @@ namespace PlayerScripts.Spell
 {
     public class BaseSpell : MonoBehaviour
     {
-        [SerializeField] private int _speed;
+        [SerializeField] private int _speedAttack;
         [SerializeField] private int _damage;
         [SerializeField] private int _manaSpell;
         [SerializeField] private float _lifeTime;
@@ -17,11 +17,11 @@ namespace PlayerScripts.Spell
         {
             if (transform.rotation.y == 0)
             {
-                GetComponent<Rigidbody2D>().AddForce(Vector2.right * 25, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(Vector2.right * _speedAttack, ForceMode2D.Impulse);
             }
             else
             {
-                GetComponent<Rigidbody2D>().AddForce(Vector2.left * 25, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(Vector2.left * _speedAttack, ForceMode2D.Impulse);
 
             }
             

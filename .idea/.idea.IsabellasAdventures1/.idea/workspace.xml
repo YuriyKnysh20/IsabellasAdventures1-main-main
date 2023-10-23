@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8f4b074f-0110-48b9-9c76-addb63b67f85" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneDefault/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneDefault/Arrow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneDefault/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneDefault/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DeathCanvas/DeathCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DeathCanvas/DeathCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/All assets/Sheets/death trap asset sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/All assets/Sheets/death trap asset sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Faerboll.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Faerboll.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Field_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Field_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Spell/BaseSpell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/Spell/BaseSpell.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +110,7 @@
       <workItem from="1697103559412" duration="4541000" />
       <workItem from="1697479550801" duration="2221000" />
       <workItem from="1697908358046" duration="1002000" />
+      <workItem from="1698090980176" duration="304000" />
     </task>
     <servers />
   </component>
