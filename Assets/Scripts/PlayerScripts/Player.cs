@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip PlayerDamageWoman;
     [SerializeField] private AudioClip DeathSound;
 
+    public Joystick joystick;
+    private float moveInput;
+
     private int _currentHealth;
     private Rigidbody2D rigidboby;
     private Animator anim;
@@ -121,7 +124,17 @@ public class Player : MonoBehaviour
         {
             move = Vector3.right;
         }
-        
+
+        moveInput = joystick.Horizontal;
+        if (moveInput > 0)
+        {
+            move = Vector3.right;
+        }
+        if (moveInput < 0)
+        {
+            move = Vector3.left;
+        }
+
         move *= speed;
         move.y = rigidboby.velocity.y;
         rigidboby.velocity = move;
