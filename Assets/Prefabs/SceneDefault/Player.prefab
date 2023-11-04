@@ -92,7 +92,7 @@ Transform:
   m_GameObject: {fileID: 4951056625368299436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 0.03, z: 0}
+  m_LocalPosition: {x: 2.8, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -238,11 +238,12 @@ MonoBehaviour:
   ArrowSound: {fileID: 8300000, guid: 338625058a95bc443b416fa3d7391014, type: 3}
   PlayerDamageWoman: {fileID: 8300000, guid: 37e50be2d3ad8594d9851807c491cb80, type: 3}
   DeathSound: {fileID: 8300000, guid: dbfc59c053407ce499a12d23ebccea06, type: 3}
+  joystick: {fileID: 0}
   arrow: {fileID: 1561747254708256, guid: f0442dee65347e34ba3569760a359643, type: 3}
   move: {x: 0, y: 0}
-  groundCheck: {fileID: 0}
-  shotPlace: {fileID: 0}
-  speed: 10
+  groundCheck: {fileID: 4596962766894100402}
+  shotPlace: {fileID: 4945034239084387962}
+  speed: 30
   jump: 20
   hp: 0
   go: 0
