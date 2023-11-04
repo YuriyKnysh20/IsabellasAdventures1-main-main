@@ -675,10 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fced133aa07de574ab96b0eb7e1d8532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsNear: 0
   questInfoForPoint: {fileID: 0}
-  questId: 
-  currentQuestState: 0
 --- !u!58 &664640518
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3000,6 +2997,47 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1628790166}
+    - target: {fileID: 138595099318725492, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423052507292279341, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423052507292279341, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423052507292279341, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423052507292279341, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902330440658115999, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311630859375043611, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311630859375043611, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aeaabef06f589014aa401ac598e18974,
+        type: 3}
     - target: {fileID: 2404856348914779085, guid: deed14516261e7743a780afaae34ef13,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3015,6 +3053,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hud
       objectReference: {fileID: 0}
+    - target: {fileID: 2740181420296294004, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740181420296294004, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740181420296294004, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740181420296294004, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4284117675056901827, guid: deed14516261e7743a780afaae34ef13,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3025,6 +3083,17 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1804527499}
+    - target: {fileID: 5343840491317060025, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343840491317060025, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aeaabef06f589014aa401ac598e18974,
+        type: 3}
     - target: {fileID: 5348399029081430550, guid: deed14516261e7743a780afaae34ef13,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3140,6 +3209,85 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6200602833571312360, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328347875334424023, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328347875334424023, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328347875334424023, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328347875334424023, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634373753501304197, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634373753501304197, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aeaabef06f589014aa401ac598e18974,
+        type: 3}
+    - target: {fileID: 6716416778158992565, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716416778158992565, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aeaabef06f589014aa401ac598e18974,
+        type: 3}
+    - target: {fileID: 6716416778158992565, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457224869014269537, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705528701873570675, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705528701873570675, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aeaabef06f589014aa401ac598e18974,
+        type: 3}
+    - target: {fileID: 8668221978690516953, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668221978690516953, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aeaabef06f589014aa401ac598e18974,
+        type: 3}
     - target: {fileID: 9111688274474485985, guid: deed14516261e7743a780afaae34ef13,
         type: 3}
       propertyPath: _player
