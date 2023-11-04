@@ -71,27 +71,25 @@ public class PauseMenu : MonoBehaviour
 
         restartMenu.SetActive(true);
         HidePauseMenu();
+
     }
     public void RestartMenuBack()
     {
-
-
         restartMenu.SetActive(false);
         ShowPauseMenu();
     }
     public void ShowQuitGameMenu()
     {
-
-
         quitGameMenu.SetActive(true);
         HidePauseMenu();
+        
+
     }
     public void QuitGameMenuBack()
     {
-
-
         quitGameMenu.SetActive(false);
-        ShowPauseMenu();
+       //ShowPauseMenu();
+        SceneManager.LoadScene("GameMenu");
     }
 
     // Function button
