@@ -85,13 +85,6 @@ public class Lore : MonoBehaviour
 
                 TextWithFourSentences.Append(sentences[sentence]);       
             }
-
-
-
-            for (int i = 0; i < resultList.Count; i++)
-            {
-                System.Console.WriteLine($"{i}) {resultList[i]}");
-            }
     }
     
 
