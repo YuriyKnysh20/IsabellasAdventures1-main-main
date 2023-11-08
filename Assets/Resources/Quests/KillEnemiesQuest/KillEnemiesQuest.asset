@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d2b80d3b8f8582419a41271aa28ebc6, type: 3}
-  m_Name: CollectCoinsQuest
+  m_Name: KillEnemiesQuest
   m_EditorClassIdentifier: 
-  <id>k__BackingField: CollectCoinsQuest
-  displayName: Collect the Coins
+  <id>k__BackingField: KillEnemiesQuest
+  displayName: Kill The Enemies
   levelRequirement: 0
   questPrerequisites: []
   questStepPrefabs:
-  - {fileID: 6940668680903275978, guid: 87030ec71c7a56947bf50ebd9456c727, type: 3}
-  goldReward: 50
-  experienceReward: 250
+  - {fileID: 3846016627815171687, guid: 192688137ff7afb4e867a6380e3a923e, type: 3}
+  goldReward: 20
+  experienceReward: 5
