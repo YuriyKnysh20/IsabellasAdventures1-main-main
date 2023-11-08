@@ -2,11 +2,11 @@ using System;
 
 public class MiscEvents
 {
-    public event Action onCoinCollected;
+    public event Action onBerryCollected;
 
     public void BerryCollected(int count)
     {
-        onCoinCollected?.Invoke();
+        onBerryCollected?.Invoke();
     }
     public event Action onEnemyKilled;
 

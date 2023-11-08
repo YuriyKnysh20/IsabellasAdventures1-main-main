@@ -63,6 +63,7 @@ public class QuestManager : MonoBehaviour
     private void StartQuest(string id)
     {
         Debug.Log("You Start Quest:" + id);
+
         Quest quest = GetQuestById(id);
         quest.InstantiateCurrentQuestStep(this.transform);
         ChangeQuestState(quest.info.id, QuestState.INPROGRESS);
@@ -94,6 +95,7 @@ public class QuestManager : MonoBehaviour
 
     private void ClaimRewards(Quest quest)
     {
+        Debug.Log("You Received gold: " + quest.info.goldReward + "and Exp:" + quest.info.experienceReward);
         // add gold method like event.goldGained(quest.info.goldReward);
         //add exp method like event.ExpGained(quest.info.experienceReward);
 

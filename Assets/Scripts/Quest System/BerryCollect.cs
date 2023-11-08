@@ -7,7 +7,6 @@ public class BerryCollect : MonoBehaviour
 {
     [Header("Config")]
     [SerializeField] private float respawnTimeSeconds = 8;
-    [SerializeField] private int goldGained = 1;
     [SerializeField] private int berryCollect = 1;
 
     private CircleCollider2D circleCollider;
@@ -23,8 +22,7 @@ public class BerryCollect : MonoBehaviour
     {
         circleCollider.enabled = false;
         visual.gameObject.SetActive(false);
-        //GameEventsManager.Instance.goldEvents.GoldGained(goldGained);
-       // GameEventsManager.Instance.miscEvents.CoinCollected(berryCollect);
+        GameEventsManager.Instance.miscEvents.BerryCollected(berryCollect);
         StopAllCoroutines();
         StartCoroutine(RespawnAfterTime());
     }

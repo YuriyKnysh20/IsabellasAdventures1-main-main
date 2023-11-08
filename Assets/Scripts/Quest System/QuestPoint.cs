@@ -18,11 +18,14 @@ public class QuestPoint : MonoBehaviour
     private QuestState currentQuestState;
 
     private QuestIcon questIcon;
+    private QuestGoalsUI _questGoalsUI;
 
     private void Awake()
     {
         questId = questInfoForPoint.id;
         questIcon = GetComponentInChildren<QuestIcon>();
+        _questGoalsUI=GetComponentInChildren<QuestGoalsUI>();
+       
     }
     private void OnEnable()
     {
