@@ -5,138 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f108ef12-809e-4773-a69b-1473c0c38d1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SwitchLevel/BetaSwitch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SwitchLevel/BetaSwitch.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1-main-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1-main-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelSelection.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSelection.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwitchLevel/SwitchLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwitchLevel/SwitchLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/16661.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/16661.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/AidKit/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/AidKit/01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/AidKit/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/AidKit/02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/AidKit/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/AidKit/03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Arrow/arrow01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Arrow/arrow01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Arrow/arrow02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Arrow/arrow02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Back.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/amanita-big.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/amanita-big.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/amanita-min-another.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/amanita-min-another.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/amanita-min.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/amanita-min.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/glass01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/glass01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/glass02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/glass02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/glass03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/glass03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-big-01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-big-01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-big-02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-big-02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-big-03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-big-03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-mid-01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-mid-01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-mid-02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-mid-02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-mid-03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-mid-03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-mid-04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-mid-04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-min-01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-min-01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-min-02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-min-02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-min-03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-min-03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-min-04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/mushroom-min-04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/toadstool-min.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/toadstool-min.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/trap-moss-amanita-big01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/trap-moss-amanita-big01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/trap-moss-amanita-big02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/trap-moss-amanita-big02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/trap-moss-amanita-big03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/trap-moss-amanita-big03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/trap-moss-amanita-big04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Backgrounds/trap-moss-amanita-big04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/BloodSplash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/BloodSplash.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Archery/a001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Archery/a001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Archery/a002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Archery/a002.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Archery/a003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Archery/a003.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Archery/a004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Archery/a004.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Breath/character-breathe01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Breath/character-breathe01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Breath/character-breathe02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Breath/character-breathe02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Breath/character-breathe04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Breath/character-breathe04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Damage/character-damage.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Damage/character-damage.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/002.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/003.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/004.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/005.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/006.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/007.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/007.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/008.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Jump/008.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/002.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/003.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/004.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/005.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/006.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/007.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/007.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/008.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Character/Walking/008.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/assasin.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/assasin.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/mag.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/mag.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/vedma.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/vedma.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/voin.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/voin.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/voitelnitsa.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Characters/voitelnitsa.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Close.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Close.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new06.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Coin/coin-new07.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/002.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/003.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/004.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/005.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Biting/006.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Breath/001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Breath/001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Breath/002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Breath/002.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Breath/003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Breath/003.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Breath/004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Breath/004.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/002.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/003.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/004.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/005.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/006.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/007.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/007.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/008.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Enemy/Walking/008.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ICON.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ICON.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/Father.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/Father.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/Maria.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/Maria.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/Mother.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/Mother.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/Robin.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/Robin.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/TheNarrator.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/NPS/TheNarrator.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Next Level.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Next Level.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Platform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Platform.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Player.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Player.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/02-red.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/02-red.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/03-blue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/03-blue.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/04-yellow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/04-yellow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/05-violet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/05-violet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/06-green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Potions/06-green.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Progressbar90.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Progressbar90.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Restart.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Restart.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/002.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/003.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/004.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/005.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/006.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/Plant/Bullet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/Plant/Bullet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/Plant/ShootingPlant.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/Plant/ShootingPlant.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/ShootingEnemy/drop05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Start dialogue.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Start dialogue.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Tablet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/Tablet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/JumpButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/JumpButton.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/LeftButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/LeftButton.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/RightButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/RightButton.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/back-solid.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/back-solid.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/health.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/UI/health.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/OldSprites/dialoguebox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/OldSprites/dialoguebox.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lore.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lore.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +33,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.23772609&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LoreBranch&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -233,6 +104,9 @@
       <workItem from="1697213337658" duration="1014000" />
       <workItem from="1697652699876" duration="3133000" />
       <workItem from="1697655873139" duration="304000" />
+      <workItem from="1698937362685" duration="2089000" />
+      <workItem from="1699086822447" duration="1740000" />
+      <workItem from="1699203466268" duration="3524000" />
     </task>
     <servers />
   </component>
