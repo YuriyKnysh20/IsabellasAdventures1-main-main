@@ -4,8 +4,14 @@ public class MiscEvents
 {
     public event Action onCoinCollected;
 
-    public void CoinCollected()
+    public void BerryCollected(int count)
     {
-        if (onCoinCollected != null) onCoinCollected();
+        onCoinCollected?.Invoke();
+    }
+    public event Action onEnemyKilled;
+
+    public void EnemyKilled()
+    {
+        onEnemyKilled?.Invoke();
     }
 }

@@ -5,28 +5,19 @@ public class QuestEvents
 
     public void StartQuest(string id)
     {
-        if (onStartQuest != null)
-        { 
-        onStartQuest(id);
-        }
+        onStartQuest?.Invoke(id);
     }
     public event Action<string> onAdvanceQuest;
 
     public void AdvanceQuest(string id)
     {
-        if (onAdvanceQuest != null)
-        {
-            onAdvanceQuest(id);
-        }
+        onAdvanceQuest?.Invoke(id);
     }
     public event Action<string> onFinishQuest;
 
     public void FinishQuest(string id)
     {
-        if (onFinishQuest != null)
-        {
-            onFinishQuest(id);
-        }
+        onFinishQuest?.Invoke(id);
     }
     public event Action<Quest> onQuestStateChange;
 
@@ -36,6 +27,12 @@ public class QuestEvents
         {
             onQuestStateChange(quest);
         }
+    }
+    public event Action<string, int, QuestStepState> onQuestStepStateChange;
+
+    public void QuestStepStateChange(string id, int stepIndex, QuestStepState questStepState)
+    {
+        onQuestStepStateChange?.Invoke(id, stepIndex, questStepState);
     }
 
 }
