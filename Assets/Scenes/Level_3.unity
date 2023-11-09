@@ -905,7 +905,7 @@ Transform:
   m_GameObject: {fileID: 687745359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.170097, y: 15.932679, z: -35}
+  m_LocalPosition: {x: -43.98608, y: 15.924999, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -968,7 +968,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b106da569c8d74548b344dc2706ce37b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 335c3f4aacfc3a44f86012a362126a40, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2743,6 +2743,11 @@ PrefabInstance:
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 1427315518}
+    - target: {fileID: 4983172738737953666, guid: 031e7a18a83b9ea4ead537911d359123,
+        type: 3}
+      propertyPath: soundSource
+      value: 
+      objectReference: {fileID: 687745365}
     - target: {fileID: 7784691889920957514, guid: 031e7a18a83b9ea4ead537911d359123,
         type: 3}
       propertyPath: _levelWindow
