@@ -18,7 +18,7 @@ public class BerryCollect : MonoBehaviour
         visual = GetComponentInChildren<SpriteRenderer>();
     }
 
-    private void CollectCoin()
+    private void CollectBerry()
     {
         circleCollider.enabled = false;
         visual.gameObject.SetActive(false);
@@ -38,7 +38,7 @@ public class BerryCollect : MonoBehaviour
     {
         if (otherCollider.CompareTag("Player"))
         {
-            CollectCoin();
+            CollectBerry();
         }
 
     }

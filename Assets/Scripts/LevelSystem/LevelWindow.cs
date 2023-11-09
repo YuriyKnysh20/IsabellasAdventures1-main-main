@@ -11,14 +11,14 @@ public class LevelWindow : MonoBehaviour
 
     private void Start()
     {
-        levelText.text = "LEVEL " +(levelSystem.GetLevelNumber());
+        levelText.text = "LEVEL " + (levelSystem.GetLevelNumber());
     }
 
     public void AddExp(int count)
     {
         levelSystem.AddExperience(count);
     }
-    
+
     private void SetExperienceBarSize(float experienceNormalized)
 
     {
@@ -26,7 +26,7 @@ public class LevelWindow : MonoBehaviour
     }
     private void SetLevelNumber(int levelNumber)
     {
-        levelText.text = "LEVEL \n" +( levelNumber + 1);
+        levelText.text = "LEVEL \n" + (levelNumber + 1);
     }
 
     public void SetLevelSystem(LevelSystem levelSystem)
@@ -44,7 +44,7 @@ public class LevelWindow : MonoBehaviour
         SetLevelNumber(levelSystem.GetLevelNumber());
     }
 
-    private void LevelSystem_OnExperienceChanged(object sender,System.EventArgs e)
+    private void LevelSystem_OnExperienceChanged(object sender, System.EventArgs e)
     {
         SetExperienceBarSize(levelSystem.GetExperienceNormalized());
 

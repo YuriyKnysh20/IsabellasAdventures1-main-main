@@ -7,6 +7,7 @@ public class QuestManager : MonoBehaviour
 {
     [Header("Config")]
     [SerializeField] private bool loadQuestState = true;
+    //[SerializeField] private Bag _bag;
 
     private Dictionary<string, Quest> _questMap;
     private void Awake()
@@ -45,6 +46,7 @@ public class QuestManager : MonoBehaviour
 
     private void ChangeQuestState(string id, QuestState state)
     {
+        Debug.Log("ChangeQuestState в квмен работает");
         Quest quest = GetQuestById(id);
         quest.state = state;
         GameEventsManager.Instance.questEvents.QuestStateChange(quest);
@@ -52,11 +54,15 @@ public class QuestManager : MonoBehaviour
 
     private void Update()
     {
+
         foreach (Quest quest in _questMap.Values)
         {
+           // Debug.Log(_questMap.Count);
             if (quest.state == QuestState.REQUIREMENTS_NOT_MET)
             {
+                Debug.Log("Update в квмен работает");
                 ChangeQuestState(quest.info.id, QuestState.CAN_START);
+
             }
         }
     }
@@ -87,10 +93,15 @@ public class QuestManager : MonoBehaviour
     }
     private void FinishQuest(string id)
     {
+        var QuestPanel = GameObject.Find("QuestGoalsUI");
+
+        QuestPanel.SetActive(false);
+
         Debug.Log("WEll DONE! you Finish Quest:" + id);
         Quest quest = GetQuestById(id);
         ClaimRewards(quest);
         ChangeQuestState(quest.info.id, QuestState.FINISHED);
+
     }
 
     private void ClaimRewards(Quest quest)
@@ -108,6 +119,7 @@ public class QuestManager : MonoBehaviour
     }
     private Dictionary<string, Quest> CreateQuestMap()
     {
+        Debug.Log("CreateQuestMap is called ");
         // load all QuestInfoSO scriptable objects in folder Resources/Quests
         QuestInfoSO[] allQuests = Resources.LoadAll<QuestInfoSO>("Quests");
         // Create the quest map
@@ -119,6 +131,7 @@ public class QuestManager : MonoBehaviour
                 Debug.LogWarning("Duplicate ID found when creating quest map" + questInfo.id);
             }
             idToQuestMap.Add(questInfo.id, LoadQuest(questInfo));
+            Debug.Log("Создан квест");
         }
         return idToQuestMap;
     }
@@ -160,6 +173,7 @@ public class QuestManager : MonoBehaviour
 
     private Quest LoadQuest(QuestInfoSO questInfo)
     {
+
         Quest quest = null;
         try
         {

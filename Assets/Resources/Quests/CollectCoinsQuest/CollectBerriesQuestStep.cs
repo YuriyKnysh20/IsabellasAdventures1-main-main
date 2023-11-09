@@ -18,17 +18,16 @@ public class CollectBerriesQuestStep : QuestStep
 
     private void BerryCollected()
     {
-
         if (_berriesCollected < _berriesToComplete)
         {
             _berriesCollected++;
             UpdateState();
-
         }
         if (_berriesCollected >= _berriesToComplete)
         {
             FinishQuestStep();
         }
+        GameEventsManager.Instance.uiEvents.BerriesChanged(_berriesCollected, _berriesToComplete);
     }
     private void UpdateState()
     {

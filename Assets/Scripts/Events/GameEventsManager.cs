@@ -1,3 +1,4 @@
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,6 +9,7 @@ public class GameEventsManager : MonoBehaviour
     public MiscEvents miscEvents;
     public QuestEvents questEvents;
     public InputEvents inputEvents;
+    public UiEvents uiEvents;
 
     private void Awake()
     {
@@ -19,5 +21,6 @@ public class GameEventsManager : MonoBehaviour
         inputEvents = new InputEvents();
         miscEvents = new MiscEvents();
         questEvents = new QuestEvents();
+        uiEvents = new UiEvents();
     }
 }
