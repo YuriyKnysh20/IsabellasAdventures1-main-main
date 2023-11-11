@@ -1,17 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static PauseMenu Instance
-    {
+    private const string GameMenu = "Level0_GameMenu";
 
-        get; protected set;
-    }
+    public static PauseMenu Instance { get; protected set; }
     public GameObject optionMenu;
     public GameObject restartMenu;
     public GameObject quitGameMenu;
@@ -20,16 +14,12 @@ public class PauseMenu : MonoBehaviour
 
     public void Start()
     {
-
-
         Instance = this;
         gameObject.SetActive(false);
     }
 
     public void SwitchDisplay()
     {
-
-
         bool isPaused = Manager.Instance.m_IsPaused;
         Manager.Instance.m_IsPaused = !isPaused;
         gameObject.SetActive(!isPaused);
@@ -39,78 +29,62 @@ public class PauseMenu : MonoBehaviour
     // UI button
     public void ShowPauseMenu()
     {
-
-
         pauseMenu.SetActive(true);
     }
 
     public void HidePauseMenu()
     {
-
-
         pauseMenu.SetActive(false);
     }
 
     public void ShowOptionMenu()
     {
-
-
         optionMenu.SetActive(true);
         HidePauseMenu();
     }
+
     public void OptionMenuBack()
     {
-
-
         optionMenu.SetActive(false);
         ShowPauseMenu();
     }
+
     public void ShowRestartMenu()
     {
-
-
         restartMenu.SetActive(true);
         HidePauseMenu();
-
     }
+
     public void RestartMenuBack()
     {
         restartMenu.SetActive(false);
         ShowPauseMenu();
     }
+
     public void ShowQuitGameMenu()
     {
         quitGameMenu.SetActive(true);
         HidePauseMenu();
-        
-
     }
+
     public void QuitGameMenuBack()
     {
-        quitGameMenu.SetActive(false);
-       //ShowPauseMenu();
-        SceneManager.LoadScene("GameMenu");
+        SceneManager.LoadScene(GameMenu);
     }
 
     // Function button
     public void RestartGame()
     {
-
-
         Time.timeScale = 1;
-        SceneManager.LoadScene("test");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void QuitGame()
     {
-
-
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
          Application.Quit();
 #endif
     }
-
-
 }

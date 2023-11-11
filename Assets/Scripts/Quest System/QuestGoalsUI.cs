@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class QuestGoalsUI : MonoBehaviour
 {
-    //[SerializeField] private GameObject _questGoalsUI;
+    ///[SerializeField] private GameObject _questGoalsUI;
 
     [SerializeField] private GameObject BerriesUIQuest;
     [SerializeField] private GameObject KillEnemiesUIQuest;
@@ -25,10 +25,10 @@ public class QuestGoalsUI : MonoBehaviour
 
     private void BerriesChanged(int _berriesCollected, int _berriesToComplete)
     {
-        textBerries.text = "Собери " + _berriesToComplete + " ягод:  " + _berriesCollected.ToString() + " из " + _berriesToComplete.ToString();
+        textBerries.text = "пїЅпїЅпїЅпїЅпїЅпїЅ " + _berriesToComplete + " пїЅпїЅпїЅпїЅ:  " + _berriesCollected.ToString() + " пїЅпїЅ " + _berriesToComplete.ToString();
         if (_berriesCollected >= _berriesToComplete)
         {
-            textBerries.text = "Собрать " + _berriesToComplete + " Ягод. Задание выполнено!" + "Вернись к Лорану, чтобы забрать награду";
+            textBerries.text = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ " + _berriesToComplete + " пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!" + "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
             QuestCompletedSprite.enabled = true;
         }
     }
