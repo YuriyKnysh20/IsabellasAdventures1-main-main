@@ -6,135 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8f4b074f-0110-48b9-9c76-addb63b67f85" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/CustomPlayButton/BookmarkSetting.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CustomPlayButton/BookmarkSetting.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PauseMenu1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PauseMenu1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneDefault/Hud.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneDefault/Hud.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Quests/CollectCoinsQuest/CollectCoinsQuest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Quests/CollectCoinsQuest/CollectCoinsQuest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2_Field.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2_Field.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pause Menu/Pause_menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pause Menu/Pause_menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quest System/QuestGoalsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quest System/QuestGoalsUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/bow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/bow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_06.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_07.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_08.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_09.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_10.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_11.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_13.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_14.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_15.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_16.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_17.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_18.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_19.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_20.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_21.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_22.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_23.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_24.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_25.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_26.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_27.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_29.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c1_30.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_06.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_07.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_08.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_09.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_10.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_11.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_13.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_14.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_15.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_16.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_17.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_18.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_19.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_20.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_21.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_22.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_23.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_24.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_25.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_26.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_27.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_28.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_29.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c2_30.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_06.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_07.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_08.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_09.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_10.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_11.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_13.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_14.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_15.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_16.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_17.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_18.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_19.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_20.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_21.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_22.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_23.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_24.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_25.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_26.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_27.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_28.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_29.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c3_30.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_06.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_07.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_08.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_09.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_10.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_11.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_13.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_14.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_15.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_16.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_17.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_18.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_19.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_20.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_21.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_22.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_23.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_24.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_25.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_26.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_27.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_28.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_29.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/object_forest_c4_30.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/object_forest_c1_28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/object_forest_c1_28.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_4Autumn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_4Autumn.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UI/UICharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UI/UICharacterController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +111,7 @@
       <workItem from="1697908358046" duration="1002000" />
       <workItem from="1698090980176" duration="304000" />
       <workItem from="1699717384545" duration="1325000" />
-      <workItem from="1699719339122" duration="1763000" />
+      <workItem from="1699719339122" duration="2785000" />
     </task>
     <servers />
   </component>

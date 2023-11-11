@@ -11,7 +11,7 @@ public class UICharacterController : MonoBehaviour
 
 	void Start()
 	{
-		Player.Instance.InitUIController(this);	
+		Player.Instance.InitUIController(this);
 	}
 
 	public PressedButton Left
