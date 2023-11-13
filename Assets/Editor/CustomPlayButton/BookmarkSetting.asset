@@ -12,8 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c2b9217a418d84a87be2b372b7048f, type: 3}
   m_Name: BookmarkSetting
   m_EditorClassIdentifier: 
-  bookmarks:
-  - {fileID: 102900000, guid: a57a3231e5294184fbbfd7ba942e605c, type: 3}
-  - {fileID: 102900000, guid: 3710da1d1201c2249898070c9e60ced8, type: 3}
-  - {fileID: 102900000, guid: 9b2ffe1e0d41d504e883cc7635a21985, type: 3}
-  - {fileID: 102900000, guid: 9a5dc18a3e7c59141b1530578cb2648f, type: 3}
+  bookmarks: []
