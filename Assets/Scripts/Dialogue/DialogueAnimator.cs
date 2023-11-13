@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class DialogueAnimator : MonoBehaviour
 {
-    public Animator startAnim;
     public DialogueManager dm;
+    public Canvas dialogue_Canvas;
+    //public GameObject say_to_npc_button;
+    //public GameObject DialogueBox;
+
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        startAnim.SetBool("startOpen", true);
+        dialogue_Canvas.enabled = true;
+
+        //DialogueBox.SetActive(true);
+        //say_to_npc_button.SetActive(true);
+
     }
     public void OnTriggerExit2D(Collider2D other)
     {
-        startAnim.SetBool("startOpen", false);
+        //DialogueBox.SetActive(false);
+        //say_to_npc_button.SetActive(false);
+
+        dialogue_Canvas.enabled = false;
+        
         dm.EndDialogue();
     }
 }

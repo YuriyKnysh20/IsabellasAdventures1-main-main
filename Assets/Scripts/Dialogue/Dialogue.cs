@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Dialogue  
 {
-    public string name;
-    [TextArea(3, 10)]
+    public string name;// name of npc with whom we talk
+    [TextArea(4, 10)] // riadki v inspectore
     public string[] sentences;
 }
