@@ -241,6 +241,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1423052507292279341, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423052507292279341, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423052507292279341, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423052507292279341, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2404856348914779085, guid: deed14516261e7743a780afaae34ef13,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -255,6 +275,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hud
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740181420296294004, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740181420296294004, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740181420296294004, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740181420296294004, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3439529395731563572, guid: deed14516261e7743a780afaae34ef13,
         type: 3}
@@ -389,6 +429,26 @@ PrefabInstance:
     - target: {fileID: 5689613791793766371, guid: deed14516261e7743a780afaae34ef13,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328347875334424023, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328347875334424023, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328347875334424023, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328347875334424023, guid: deed14516261e7743a780afaae34ef13,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9111688274474485985, guid: deed14516261e7743a780afaae34ef13,

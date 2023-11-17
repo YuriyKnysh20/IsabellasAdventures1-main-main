@@ -7,8 +7,9 @@ using Random = UnityEngine.Random;
 
 namespace Script.Enemy.EnemyWithDamage
 {
-    public class EnemyWithDamage : MonoBehaviour
+    public class EnemyWithDamage : MonoBehaviour, IEnemy
     {
+        public int ID { get; set; } // for quest system
         [SerializeField] private int _health;
         [SerializeField] private Player _target;
         [SerializeField] private List<ItemsData> _itemsDatas;
@@ -23,18 +24,16 @@ namespace Script.Enemy.EnemyWithDamage
         public Player Target => _target;
         public event UnityAction<int, int> EnemyHealthCheanged;
         public event UnityAction<int, int> EnemyHealthTextChanged;
-
         private void Start()
         {
+            ID = 0;// for QUESTSYSTEM
             EnemyHealthTextChanged?.Invoke(_currentHealth, _health);
         }
-
         private void Awake()
         {
             _animator = GetComponent<Animator>();
             _currentHealth = _health;
         }
-
         public void TakeDamage(int damage)
         {
             _currentHealth -= damage;
@@ -46,9 +45,9 @@ namespace Script.Enemy.EnemyWithDamage
             if (_currentHealth <= 0)
             {
                 StartCoroutine(StartDie());
+
             }
         }
-        
         private IEnumerator StartDie()
         {
             soundSource.PlayOneShot(WolfDie);
@@ -58,21 +57,21 @@ namespace Script.Enemy.EnemyWithDamage
             ItemDrop();
 
             Destroy(gameObject, 0.3f);
+
+            QuestEvents.EnemyDied(this); // for qs
             yield break;
         }
-
         private GameObject ItemDrop()
         {
             int randomIndex = Random.Range(0, _itemsDatas.Count);
             ItemsData data = _itemsDatas[randomIndex];
-        
-            GameObject item= Instantiate(data.Prefab, transform.position, Quaternion.identity);
+
+            GameObject item = Instantiate(data.Prefab, transform.position, Quaternion.identity);
             item.GetComponent<Items>().GetItemId(data.TypeID);
             item.GetComponent<Items>().Count = data.Value;
-        
+
             return item;
         }
-
         private GameObject Experience()
         {
             GameObject exp = Instantiate(_experience.Prefab, transform.position, Quaternion.identity);
