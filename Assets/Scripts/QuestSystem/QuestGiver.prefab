@@ -802,8 +802,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   say_to_npc: {fileID: 866741302001289861}
+  _questPanel: {fileID: 0}
   quests: {fileID: 0}
   questType: KillWolfes
+  dialogueManager: {fileID: 372898176323707018}
 --- !u!1 &6951926902428234975
 GameObject:
   m_ObjectHideFlags: 0

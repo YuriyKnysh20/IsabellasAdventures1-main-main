@@ -1,25 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public GameObject say_to_npc;
-
+    public GameObject _startConversation;
     public Text dialogueText;
     public Text nameText;// name of quest giver
 
     public Animator animator;
 
-    private Queue<string> sentences;
+    public Queue<string> sentences;
+
     private void Start()
     {
         sentences = new Queue<string>();
     }
     public void StartDialogue(Dialogue dialogue)
     {
-        say_to_npc.SetActive(false);
+        _startConversation.SetActive(false);
 
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
@@ -55,6 +56,6 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        say_to_npc.SetActive(true);
+        _startConversation.SetActive(true);
     }
 }

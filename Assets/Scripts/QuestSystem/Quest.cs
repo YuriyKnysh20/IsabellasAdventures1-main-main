@@ -4,9 +4,7 @@ using UnityEngine;
 using System.Linq;
 public class Quest : MonoBehaviour
 {
-   // private LevelWindow _levelWindow;
-   // private LevelSystem levelSystem;
-
+    
     public List<Goal> Goals { get; set; } = new List<Goal>();
     public string QuestName { get; set; }
     public string Description { get; set; }
@@ -20,15 +18,13 @@ public class Quest : MonoBehaviour
         Completed = Goals.All(g => g.GoalCompleted);// return true or false
         Debug.Log("Completed in quest =" + Completed);
     }
-    //private bool Iscomplete(Goal g)
-    //{
-    //    return g.GoalCompleted;
-    //}
     public void GiveReward()
     {
+        LevelWindow levelWindow = FindObjectOfType<LevelWindow>();
 
-        Debug.Log("Daem nagradu:" + "ExperienceReward\t" + ExperienceReward + "GoldReward\t" + GoldReward);
-        //_levelWindow.AddExp((int)ExperienceReward);
-        //levelSystem.AddExperience(ExperienceReward);
+        if (levelWindow != null)
+            levelWindow.AddExp(ExperienceReward);
+        else Debug.LogWarning("LevelWindow не найден в сцене. Награда не выдается.");
+
     }
 }

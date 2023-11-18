@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class QuestSystemUI : MonoBehaviour
 {
     [SerializeField] private GameObject _questSystemUI;//++ pokazat skrit panel
-   
-    [SerializeField] private GameObject KillGoalString;
-    [SerializeField] private GameObject CollectGoalString;
+    [SerializeField] private GameObject KillGoalString;//++
+    [SerializeField] private GameObject CollectGoalString;//++
     [SerializeField] private Image CompleteKillGoalImg;//++
     [SerializeField] private Image CompleteCollectGoalImg;//++
     [SerializeField] private Text KillGoalTxt;//++
@@ -17,12 +14,12 @@ public class QuestSystemUI : MonoBehaviour
     [SerializeField] private Text ExpTxt;//++
     private void OnEnable()
     {
-        QuestEvents.OnAssignUiRewards += CurrentRewardsForQuest;
+        QuestEvents.AssignUiRewards += CurrentRewardsForQuest;
         QuestEvents.IsAmountUpdate += UpdateUIAmount;
     }
     private void OnDisable()
     {
-        QuestEvents.OnAssignUiRewards -= CurrentRewardsForQuest;
+        QuestEvents.AssignUiRewards -= CurrentRewardsForQuest;
         QuestEvents.IsAmountUpdate -= UpdateUIAmount;
     }
     private void CurrentRewardsForQuest(string QuestName, int ExperienceReward, int GoldReward)
@@ -50,6 +47,9 @@ public class QuestSystemUI : MonoBehaviour
 
         if (currentamout == requiredamount)
         {
+            KillGoalTxt.text = "¬ернись к жителю леса и забери награду";
+            CollectGoalTxt.text = "¬ернись к жителю леса и забери награду";
+
             CompleteKillGoalImg.enabled = true;
             CompleteCollectGoalImg.enabled = true;
         }
