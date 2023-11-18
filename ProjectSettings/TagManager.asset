@@ -51,3 +51,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: EnvironmentsBackGround
+    uniqueID: 3770063231
+    locked: 0
+  - name: Enemy
+    uniqueID: 15483119
+    locked: 0
+  - name: Player
+    uniqueID: 2094802239
+    locked: 0
+  - name: EnvironmentsForward
+    uniqueID: 3001445329
+    locked: 0
