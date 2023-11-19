@@ -1,4 +1,11 @@
+using JetBrains.Annotations;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestGiver : MonoBehaviour
 {
@@ -7,7 +14,6 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private GameObject _inProcessQuest;
     [SerializeField] private GameObject _finishQuest;
     [SerializeField] private GameObject _completedQuest;
-    [SerializeField] private GameObject _QuestRewardPanel;
     [SerializeField] private QuestSystemUI _questPanel;
     #endregion
     public bool AssignedQuest { get; set; }//Назначенный квест
@@ -16,14 +22,19 @@ public class QuestGiver : MonoBehaviour
 
     [SerializeField] private GameObject quests; // in this GO we will created a Quest
     [SerializeField] private string questType;// имя квеста например "KillWolfes" KillWolfes.cs
-   
+    [SerializeField] private Button ClaimReward;
+    [SerializeField] private GameObject _QuestRewardCanvas;
+    public DialogueManager dialoguemanager;
+    public Dialogue dialogue;
+    private DialogueTrigger finishQuestDialogueTrigger;
+    [SerializeField] public Button CompletedQuest;
     void AssignQuest()
     {
         AssignedQuest = true;
         Quest = (Quest)quests.AddComponent(System.Type.GetType(questType));// в скобки нужно передать строку, название квеста.
         _questPanel.ShowPanel(!Quest.Completed);
     }
-    void CheckQuest()
+    public void CheckQuest()
     {
         if (Quest.Completed)
         {
@@ -31,8 +42,7 @@ public class QuestGiver : MonoBehaviour
 
             _questPanel.ShowPanel(!Quest.Completed);
             _finishQuest.SetActive(true);
-            Quest.GiveReward();// даем награду игроку
-            _QuestRewardPanel.SetActive(true);
+            WaitGiveReward();
             Helped = true;
             AssignedQuest = false;
         }
@@ -40,7 +50,52 @@ public class QuestGiver : MonoBehaviour
         {
             _inProcessQuest.SetActive(true);
         }
+
     }
+    public void WaitGiveReward()
+    {
+        ClaimReward.onClick.AddListener(ButtonReward);
+        CompletedQuest.onClick.AddListener(OnCompletedQuestClicked);
+        StartCoroutine(WaitForButtonPress());
+        //dialoguemanager.sentences.Count
+
+    }
+    public void ButtonReward()
+    {
+        Quest.GiveReward();// даем награду игроку
+    }
+    public void GiveReward()
+    {
+        finishQuestDialogueTrigger = _finishQuest.GetComponent<DialogueTrigger>();
+        int sentencesLenght = finishQuestDialogueTrigger.dialogue.sentences.Length;
+        for (int sentences = 0; sentences <= finishQuestDialogueTrigger.dialogue.sentences.Length; sentences++, sentencesLenght--)
+        {
+            if (sentencesLenght == 0)
+            {
+
+                _QuestRewardCanvas.SetActive(true);
+            }
+        }
+    }
+    IEnumerator WaitForButtonPress()
+    {
+        // Ждем, пока кнопка не будет нажата
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0)); // Или используйте свое условие
+
+        Debug.Log("Button _completedQuest Pressed!");
+        GiveReward();
+        // Ваш код для выполнения действий после нажатия кнопки
+
+    }
+    void OnCompletedQuestClicked()
+    {
+        Debug.Log("Button _completedQuest Clicked!");
+
+        // Ничего не делаем здесь, так как ждем, пока кнопка будет нажата в корутине
+    }
+
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -69,5 +124,6 @@ public class QuestGiver : MonoBehaviour
                 AssignQuest();//назначаем квест при выходе с колизии
             }
         }
+
     }
 }
