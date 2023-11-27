@@ -22,23 +22,16 @@ public class QuestEvents : MonoBehaviour
 
     public delegate void UIevent(string QuestName, int ExperienceReward, int GoldReward);
     public static event UIevent AssignUiRewards;
-
-
-    public static void AssignUIRewards(string QuestName,int ExperienceReward, int GoldReward)
+        public static void AssignUIRewards(string QuestName,int ExperienceReward, int GoldReward)
     {
         AssignUiRewards?.Invoke(QuestName, ExperienceReward, GoldReward);
     }
-
-    public delegate void UpdateUIEvent( int currentAmount, int RequiredAmount);
-
-    public static event UpdateUIEvent IsAmountUpdate;
-
+        public delegate void UpdateUIEvent( int currentAmount, int RequiredAmount);
+        public static event UpdateUIEvent IsAmountUpdate;
 
     public static void AmountUpdate( int currentAmount, int RequiredAmount)
     {
         IsAmountUpdate?.Invoke( currentAmount, RequiredAmount);
     }
-
-
-    #endregion
+        #endregion
 }

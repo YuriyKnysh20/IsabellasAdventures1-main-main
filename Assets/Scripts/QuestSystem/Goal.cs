@@ -24,7 +24,7 @@ public class Goal
 
     public void Evaluate()
     {
-         Debug.Log("Evaluete is calling" + "CurrentAmount= " + CurrentAmount + "RequiredAmount=" + RequiredAmount);
+        // Debug.Log("Evaluete is calling" + "CurrentAmount= " + CurrentAmount + "RequiredAmount=" + RequiredAmount);
         if (CurrentAmount >= RequiredAmount)
         {
             Complete();

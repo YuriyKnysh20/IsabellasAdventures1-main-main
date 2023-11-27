@@ -1,7 +1,4 @@
 using Script.Enemy.EnemyWithDamage;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class KillGoal : Goal
@@ -30,7 +27,7 @@ public class KillGoal : Goal
     {
         if (enemy.ID == this.EnemyID)
         {
-            
+
             this.CurrentAmount++;
             QuestEvents.AmountUpdate(CurrentAmount, RequiredAmount);
             Evaluate();

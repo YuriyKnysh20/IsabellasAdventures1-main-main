@@ -1,9 +1,4 @@
-using JetBrains.Annotations;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,31 +10,51 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private GameObject _finishQuest;
     [SerializeField] private GameObject _completedQuest;
     [SerializeField] private QuestSystemUI _questPanel;
+    public Button CompletedQuest;
+    [SerializeField] private Button ClaimReward;
+    [SerializeField] private GameObject _QuestRewardCanvas;
     #endregion
     public bool AssignedQuest { get; set; }//Ќазначенный квест
     public bool Helped { get; set; }
     private Quest Quest { get; set; }// квест который дает квест гивер в журнал квестов
-
     [SerializeField] private GameObject quests; // in this GO we will created a Quest
     [SerializeField] private string questType;// им€ квеста например "KillWolfes" KillWolfes.cs
-    [SerializeField] private Button ClaimReward;
-    [SerializeField] private GameObject _QuestRewardCanvas;
-    public DialogueManager dialoguemanager;
-    public Dialogue dialogue;
     private DialogueTrigger finishQuestDialogueTrigger;
-    [SerializeField] public Button CompletedQuest;
+    #region For SaveData
+    private void Awake()
+    {
+        Debug.Log("Awake method called");
+        LoadQuestProgress();
+    }
+    public void SaveQuestProgress()
+    {
+        Debug.Log("Saving quest data...");
+        SaveSystem.SaveQuestData(Quest);
+    }
+    public void LoadQuestProgress()
+    {
+        Debug.Log("Loading quest data...");
+        SaveSystem.LoadQuestData(Quest);
+    }
+    private void OnApplicationQuit()
+    {
+        Debug.Log("OnApplicationQuit method called");
+        SaveQuestProgress();
+    }
+    #endregion
     void AssignQuest()
     {
         AssignedQuest = true;
         Quest = (Quest)quests.AddComponent(System.Type.GetType(questType));// в скобки нужно передать строку, название квеста.
         _questPanel.ShowPanel(!Quest.Completed);
+        _takeQuest.SetActive(false);// хайд кнопки вз€ть квест 
+
     }
     public void CheckQuest()
     {
         if (Quest.Completed)
         {
             Debug.Log("Quest.Completed======" + Quest.Completed);
-
             _questPanel.ShowPanel(!Quest.Completed);
             _finishQuest.SetActive(true);
             WaitGiveReward();
@@ -50,15 +65,12 @@ public class QuestGiver : MonoBehaviour
         {
             _inProcessQuest.SetActive(true);
         }
-
     }
     public void WaitGiveReward()
     {
         ClaimReward.onClick.AddListener(ButtonReward);
         CompletedQuest.onClick.AddListener(OnCompletedQuestClicked);
         StartCoroutine(WaitForButtonPress());
-        //dialoguemanager.sentences.Count
-
     }
     public void ButtonReward()
     {
@@ -72,46 +84,45 @@ public class QuestGiver : MonoBehaviour
         {
             if (sentencesLenght == 0)
             {
-
                 _QuestRewardCanvas.SetActive(true);
             }
         }
     }
     IEnumerator WaitForButtonPress()
     {
-        // ∆дем, пока кнопка не будет нажата
-        yield return new WaitUntil(() => Input.GetMouseButtonDown(0)); // »ли используйте свое условие
-
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));  // ∆дем, пока кнопка не будет нажата
         Debug.Log("Button _completedQuest Pressed!");
         GiveReward();
-        // ¬аш код дл€ выполнени€ действий после нажати€ кнопки
-
     }
     void OnCompletedQuestClicked()
     {
         Debug.Log("Button _completedQuest Clicked!");
-
         // Ќичего не делаем здесь, так как ждем, пока кнопка будет нажата в корутине
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (!AssignedQuest && !Helped)// если нет квеста и еще не выполнен
+            if (Quest == null)
             {
-                _takeQuest.SetActive(true);
+                if (!AssignedQuest && !Helped)// если нет квеста и еще не выполнен
+                {
+                    AssignQuest();//назначаем квест при выходе с колизии
+                    _takeQuest.SetActive(true);// ѕоказ кнопки вз€ть квест 
+                }
             }
-            else if (AssignedQuest && !Helped)// если есть квест и еще не выполнен
+            if (AssignedQuest && !Helped)// если есть квест и еще не выполнен
             {
                 _takeQuest.SetActive(false);
                 CheckQuest();
             }
-            else
+            else // когда выполнен квест
             {
                 _completedQuest.SetActive(true);
+                _takeQuest.SetActive(false);
+                _inProcessQuest.SetActive(false);
+                _finishQuest.SetActive(false);
             }
         }
     }
@@ -121,9 +132,8 @@ public class QuestGiver : MonoBehaviour
         {
             if (!AssignedQuest && !Helped)// если нет квеста и еще не выполнен
             {
-                AssignQuest();//назначаем квест при выходе с колизии
+                // AssignQuest();//назначаем квест при выходе с колизии
             }
         }
-
     }
 }
