@@ -4,26 +4,21 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] private Button _back;
-
-    public void LoadCharacterChoiceScreen()
+    /*Данный метод должен работать когда игра пройдена,при нажатии на кнопку должна не начинаться игра,а перекидывать в новосозданную сцену
+    CharacterChoiceScene,она ещё не готова!*/
+    /*public void LoadCharacterChoiceScreen()
     {
-        //characterScreen.SetActive(true);
-        SceneManager.LoadScene(1);
-    }
+        SceneManager.LoadScene("CharacterChoiceScene");
+    }*/
 
-    public void LoadCharacterScreen()
-    {
-    }
-
-    public void LoadTo(int level)
+    /*public void LoadTo(int level)
     {
         SceneManager.LoadScene(level);
-    }
+    }*/
 
-    public void Back()
+    public void OnClickLevels()
     {
-        _back.interactable = true;
+        SceneManager.LoadScene("LevelSelection");
     }
 
     public void OnClickPlay()
