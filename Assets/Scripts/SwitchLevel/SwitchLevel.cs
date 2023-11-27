@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
+
+
 [RequireComponent(typeof(Button))]
+
 public class SwitchLevel : MonoBehaviour
 {
     [Header("Выбор типа ввода") ] [Tooltip("При выборе одного типа ввода - игнорируется другой")]
@@ -16,7 +19,8 @@ public class SwitchLevel : MonoBehaviour
     [Header("Поля для ввода")]
     [SerializeField] private int _sceneIndex;
     [SerializeField] private string _sceneName;
-    
+    [SerializeField] private Button _backButton;
+
     private Button _button;
 
     [SerializeField]private BetaSwitch _betaSwitch;
@@ -44,7 +48,14 @@ public class SwitchLevel : MonoBehaviour
             Debug.Log("Index");
         }
     }
+    public void OnClickBack()
+    {
+        _backButton.IsInteractable();
+        SceneManager.LoadScene("Level0_GameMenu");
+
+    }
 }
+
 
 public enum Chooseinput
 {

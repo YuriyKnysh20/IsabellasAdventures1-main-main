@@ -73,30 +73,30 @@ public class CharacterSpawner : MonoBehaviour
     public void SetCharacterAssasin()
     {
         _selectedCharacter = _assasin;
-        _menu.LoadTo(startLevel);
+        //_menu.LoadTo(startLevel);
     }
 
     public void SetCharacterWitch()
     {
         _selectedCharacter = _witch;
-        _menu.LoadTo(startLevel);
+       // _menu.LoadTo(startLevel);
     }
 
     public void SetCharacterWarrior()
     {
         _selectedCharacter = _warrior;
-        _menu.LoadTo(startLevel);
+        //_menu.LoadTo(startLevel);
     }
 
     public void SetCharacterWomanWarrior()
     {
         _selectedCharacter = _womanWarrior;
-        _menu.LoadTo(startLevel);
+       // _menu.LoadTo(startLevel);
     }
 
     public void SetCharacterWizard()
     {
         _selectedCharacter = _wizard;
-        _menu.LoadTo(startLevel);
+       // _menu.LoadTo(startLevel);
     }
 }
