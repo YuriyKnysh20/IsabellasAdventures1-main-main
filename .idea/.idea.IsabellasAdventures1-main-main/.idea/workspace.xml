@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f108ef12-809e-4773-a69b-1473c0c38d1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1-main-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsabellasAdventures1-main-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/CustomPlayButton/BookmarkSetting.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CustomPlayButton/BookmarkSetting.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/CustomPlayButton/BookmarkSetting.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CustomPlayButton/BookmarkSetting.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2_Field.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2_Field.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_2Lore.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_2Lore.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +20,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e279d988b9d4542841de511fbfdf8c294ae00/e2/49b2e239/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/787acc3c9a4c471ba7d971300105af2446ac00/56/71e1b98b/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DeathCanvas/DeathCanvas.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2WFOzCIRwdonZvfodPOPIx3d7ws" />
@@ -34,7 +36,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "XThreadsFramesViewSplitterKey": "0.23772609",
-    "git-widget-placeholder": "level2design",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,10 +79,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17984">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17984" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -109,6 +111,7 @@
       <workItem from="1699086822447" duration="1740000" />
       <workItem from="1699203466268" duration="3524000" />
       <workItem from="1699901017806" duration="1406000" />
+      <workItem from="1701111583552" duration="5536000" />
     </task>
     <servers />
   </component>
@@ -119,5 +122,245 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>43</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="40" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="878" />
+            </startOffsets>
+            <endOffsets>
+              <option value="913" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>45</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="42" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="935" />
+            </startOffsets>
+            <endOffsets>
+              <option value="972" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>55</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="50" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="1267" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1296" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>60</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="55" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="1634" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1673" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>61</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="56" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="1686" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1768" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>64</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="59" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="1889" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1954" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>66</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="61" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="1993" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2042" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>67</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="62" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="2063" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2119" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>80</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="75" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="3304" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3354" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>82</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="77" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="3393" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3449" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>102</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="78" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="4972" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4981" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>104</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="80" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="5135" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5138" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>106</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="82" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="5181" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5230" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>107</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="83" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="5251" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5257" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>109</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="86" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="5292" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5342" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>51</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="49" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="1194" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1214" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>46</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="46" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="981" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1031" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/UI/Lore.cs</url>
+          <line>56</line>
+          <properties documentPath="E:\Unity\Unitys projects\IsabellasAdventures1-main-main\Assets\Scripts\Game\UI\Lore.cs" initialLine="56" containingFunctionPresentation="Method 'DividingIntoParagraphs'">
+            <startOffsets>
+              <option value="1305" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1375" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
