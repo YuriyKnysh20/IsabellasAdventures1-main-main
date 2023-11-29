@@ -50,4 +50,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/CharacterChoiceScene.unity
     guid: 2786d0a10caa7814b9b6d37c69cfe8b8
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 60b18aa856b5d164b8d27a90d93b307a,
+      type: 2}

@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject restartMenu;
     public GameObject quitGameMenu;
     public GameObject pauseMenu;
+    public GameObject PanelControlls;// for saving quest
+    public Savingcontrolchoice savingControlChoice;// for saving Control
 
 
     public void Start()
@@ -25,28 +27,51 @@ public class PauseMenu : MonoBehaviour
         gameObject.SetActive(!isPaused);
         Time.timeScale = Manager.Instance.m_IsPaused ? 0 : 1;
     }
+    public void ContinueClicked()// calling when user click continue in menu pause
+    {
+        pauseMenu.SetActive(false);
 
+        savingControlChoice.SaveControlSetting();// for saving Control, save joystick or arrows
+        Debug.Log("SaveControlSetting");
+    }
+    public void ShowPanelControlls() // calling when user clicked nastroiki  v pause menu
+    {
+        PanelControlls.SetActive(true);
+        savingControlChoice.LoadControlSetting();// for saving Control
+        Debug.Log("LoadControlSetting");
+    }
+    public void ReturnToPouseMenu()// calling when user clicked Nazad v vibore upravlenia
+    {
+        PanelControlls.SetActive(false);
+        savingControlChoice.SaveControlSetting();// for saving Control
+        Debug.Log("SaveControlSetting");
+    }
     // UI button
     public void ShowPauseMenu()
     {
         pauseMenu.SetActive(true);
+
     }
 
     public void HidePauseMenu()
     {
         pauseMenu.SetActive(false);
+
     }
 
     public void ShowOptionMenu()
     {
+
         optionMenu.SetActive(true);
         HidePauseMenu();
+
     }
 
     public void OptionMenuBack()
     {
         optionMenu.SetActive(false);
         ShowPauseMenu();
+
     }
 
     public void ShowRestartMenu()

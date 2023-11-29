@@ -14,6 +14,7 @@ TagManager:
   - Hurt
   - Attack
   - Ground
+  - Papers
   layers:
   - Default
   - TransparentFX

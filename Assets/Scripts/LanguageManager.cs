@@ -6,19 +6,20 @@ using TMPro;
 
 public class LanguageManager : MonoBehaviour
 {
-    public Dropdown languageDropdown;
+    public TMP_Dropdown dropdown;
+    private const string LanguageKey = "SelectedLanguage";
     void Start()
-    {        // Добавьте слушатель изменения значения Dropdown
-        languageDropdown.onValueChanged.AddListener(OnLanguageChanged);
+    {
+        int savedLanguageIndex = PlayerPrefs.GetInt(LanguageKey, 0);
+        dropdown.value = savedLanguageIndex;
+        dropdown.onValueChanged.AddListener(OnDropdownValueChanged);
     }
 
-    void OnLanguageChanged(int index)
+    private void OnDropdownValueChanged(int index)
     {
-        // Получаем выбранный язык
-        string selectedLanguage = languageDropdown.options[index].text;
+        PlayerPrefs.SetInt(LanguageKey, index);
+        PlayerPrefs.Save();
 
-        // Здесь  добавить код для смены языка в вашем приложении
-        // Например, использовать Localization систему или изменить тексты вручную
-        Debug.Log("Selected language: " + selectedLanguage);
     }
 }
+

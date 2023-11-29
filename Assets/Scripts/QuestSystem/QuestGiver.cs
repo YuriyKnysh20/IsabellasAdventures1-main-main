@@ -14,12 +14,14 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private Button ClaimReward;
     [SerializeField] private GameObject _QuestRewardCanvas;
     #endregion
+    [SerializeField] private LevelGoals levelGoals;
     public bool AssignedQuest { get; set; }//Назначенный квест
     public bool Helped { get; set; }
     private Quest Quest { get; set; }// квест который дает квест гивер в журнал квестов
     [SerializeField] private GameObject quests; // in this GO we will created a Quest
     [SerializeField] private string questType;// имя квеста например "KillWolfes" KillWolfes.cs
     private DialogueTrigger finishQuestDialogueTrigger;
+   
     #region For SaveData
     private void Awake()
     {
@@ -60,6 +62,7 @@ public class QuestGiver : MonoBehaviour
             WaitGiveReward();
             Helped = true;
             AssignedQuest = false;
+            levelGoals.SetQuestCompleted(true);//передаю в левелс голс что квест завершен.
         }
         else
         {
