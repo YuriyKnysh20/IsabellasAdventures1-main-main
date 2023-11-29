@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,8 @@ public class Lore : MonoBehaviour
     {
         DividingIntoParagraphs();
         text.text = resultList[0];
+        string temp = string.Join("",lore);
+        Debug.Log(temp);
     }
 
     void TextReplace()
@@ -32,6 +35,7 @@ public class Lore : MonoBehaviour
         else
         {
             text.text = resultList[index];
+            Debug.Log(index);
         }
     }
 
@@ -40,11 +44,13 @@ public class Lore : MonoBehaviour
         string temp = string.Join("",lore);
             
         string[] sentences = temp.Split(".");
+        Array.Resize(ref sentences, sentences.Length - 1);
         
         // Расставить точки в конце предложений(а то после Split они убираются)
         for (int i = 0; i < sentences.Length; i++)
         {
             sentences[i] += ".";
+            print(sentences[i]);
         }
 
         string resultString = "    ";
@@ -75,14 +81,32 @@ public class Lore : MonoBehaviour
                 if(sentencesLenght < NumberOfSentencesInParagraph)
                 {
                     TextWithFourSentences = new StringBuilder(resultString);
-                    for (int j = sentencesLenght; j < sentences.Length; j++)
+                    
+                    /*
+                     чтобы мы начинали записывать оставшиеся предложения мы должны отнять от длины массива
+                     Зачем? До исправления ошибки если sentencesLenght < NumberOfSentencesInParagraph то мы начинали
+                     цикл с количества оставшихся предложений по конец массива sentences(поэтому у меня в последнем абзаце
+                     вместо последних n(при n < 4) предложений записывадись все предложения, начиная с n заканчивая sentences.Length)
+                     Чтобы исправить эту ошибку, цикл нужно начинать не с n(при n<4), а с sentences.Length -  sentencesLenght,
+                     (т,е мы начинаем с индекса первого предложения, которые не вошли в полноценный абзац и добавляем TextWithFourSentences все оставшиеся предложения)
+                     Мы же каждый цикл уменьшаем sentencesLenght(sentencesLenght обозначает скоко предложений осталось в массиве)
+                     и в итоге чтобы правильно отобразить конечные предложения обзац(с его предложениями)
+                     Мы отнимает от длины массива предложений(sentences.Length) кол-во оставшихся предложений(sentencesLenght) 
+                     Пример: 
+                     sentences.Length = 23
+                     sentencesLenght = 3
+                     int j = 23 - 3 (20)
+                     и в итоге цикл начинается правильно(т.е с первого оставшегося предложения)
+                     
+                     
+                    */
+                    for (int j = sentences.Length -  sentencesLenght; j < sentences.Length; j++)
                     {
                         TextWithFourSentences.Append(sentences[j]);
                     }
                     resultList.Add(TextWithFourSentences.ToString());
                     break;
                 }
-
                 TextWithFourSentences.Append(sentences[sentence]);       
             }
     }
