@@ -79,5 +79,24 @@ namespace Script.Enemy.EnemyWithDamage
             exp.GetComponent<Items>().Count = _experience.Value;
             return exp;
         }
+
+        #region ForKnockBack with trigger if you dont want to use AttackState.cs
+        // now realization in Attack state.
+        //private void OnTriggerEnter2D(Collider2D other)
+        //{
+        //    if (other.CompareTag("Player"))
+        //    {
+        //        _target.KBCounter = _target.KBTotalTime;
+        //        if (other.transform.position.x <= transform.position.x)// if player on the left hit from the right
+        //        {
+        //            _target.KnockFromRight = true;
+        //        }
+        //        if (other.transform.position.x > transform.position.x)// if player on the left hit from the right
+        //        {
+        //            _target.KnockFromRight = false;
+        //        }
+        //    }
+        //}
+        #endregion
     }
 }

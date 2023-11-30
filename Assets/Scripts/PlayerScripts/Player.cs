@@ -7,6 +7,12 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    [Header("\t\t\t\tFOR KNOCKBACK")]
+    [SerializeField] private float KBForce;// how powerful the KB will be
+    public float KBCounter;// how much time left of the effect
+    public float KBTotalTime;// how long Kb will be
+    public bool KnockFromRight;// direction
+    [Header("\t\t\t\tHealth")]
     [SerializeField] public int _health;
     [SerializeField] private HealthPlayer healthBar;
     [SerializeField] private float damageForce;
@@ -32,7 +38,6 @@ public class Player : MonoBehaviour
     public static Player Instance { get; set; }
     public event UnityAction<int, int> HealthChanged;
     public event UnityAction<int, int> HealthTextChanged;
-
     void Start()
     {
         rigidboby = GetComponent<Rigidbody2D>();
@@ -93,10 +98,26 @@ public class Player : MonoBehaviour
         }
 
         //Go();
-        Move();
+        if (KBCounter <= 0)// when knock you cant move 
+        {
+            Move();
+        }
+        else
+        {
+            if (KnockFromRight == true)
+            {
+                rigidboby.velocity = new Vector2(-KBForce, KBForce);
+            }
+            if (KnockFromRight == false)
+            {
+                rigidboby.velocity = new Vector2(KBForce, -KBForce);
+            }
+            KBCounter -= Time.deltaTime;//makes the counter go down to 0;
+        }
+
         Jump();
-        anim.SetFloat("Speed",Mathf.Abs(move.x));
-        
+        anim.SetFloat("Speed", Mathf.Abs(move.x));
+
         GroundCheck();
     }
 
@@ -292,7 +313,7 @@ public class Player : MonoBehaviour
             StartCoroutine(PlayerDie());
         }
     }
-    
+
     IEnumerator PlayerDie()
     {
         soundSource.PlayOneShot(DeathSound);

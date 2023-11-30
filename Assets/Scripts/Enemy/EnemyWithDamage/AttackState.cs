@@ -33,5 +33,17 @@ public class AttackState : State
     {
         _animator.SetTrigger("Attack");
         target.ApplyDamage(_damage);
+
+        #region For Knockback
+        target.KBCounter = target.KBTotalTime;
+        if (target.transform.position.x <= transform.position.x)// if player on the left hit from the right
+        {
+            target.KnockFromRight = true;
+        }
+        if (target.transform.position.x > transform.position.x)// if player on the left hit from the right
+        {
+            target.KnockFromRight = false;
+        }
+        #endregion
     }
 }
