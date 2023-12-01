@@ -106,6 +106,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        savingControlChoice.SaveControlSetting();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
