@@ -40,7 +40,7 @@ public class LevelController : MonoBehaviour
     }
     void LoadGameMenu()
     {
-        SceneManager.LoadScene("GameMenu");
+        SceneManager.LoadScene("Level0_GameMenu");
     }
 	
 	

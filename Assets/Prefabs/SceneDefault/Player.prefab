@@ -231,18 +231,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981c596a9e519d048a878026d8b7d9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KBForce: 6
+  KBCounter: 1
+  KBTotalTime: 1
+  KnockFromRight: 0
   _health: 100
   healthBar: {fileID: 0}
   damageForce: 150
   soundSource: {fileID: 4949505965668184169}
   ArrowSound: {fileID: 8300000, guid: 338625058a95bc443b416fa3d7391014, type: 3}
-  PlayerDamageWoman: {fileID: 8300000, guid: 37e50be2d3ad8594d9851807c491cb80, type: 3}
-  DeathSound: {fileID: 8300000, guid: dbfc59c053407ce499a12d23ebccea06, type: 3}
+  PlayerDamageWoman: {fileID: 8300000, guid: 610c6fd256187af47909f0acd3fdfe42, type: 3}
+  DeathSound: {fileID: 8300000, guid: 610c6fd256187af47909f0acd3fdfe42, type: 3}
   joystick: {fileID: 0}
-  arrow: {fileID: 1561747254708256, guid: f0442dee65347e34ba3569760a359643, type: 3}
   move: {x: 0, y: 0}
   groundCheck: {fileID: 4596962766894100402}
   shotPlace: {fileID: 4945034239084387962}
+  arrow: {fileID: 1561747254708256, guid: f0442dee65347e34ba3569760a359643, type: 3}
   speed: 30
   jump: 20
   hp: 0

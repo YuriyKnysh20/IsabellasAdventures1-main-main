@@ -23,6 +23,6 @@ public class SocialNetworks : MonoBehaviour
     }
     public void OnContinueClick()
     {
-        SceneManager.LoadScene(13);
+        SceneManager.LoadScene(9);
     }
 }

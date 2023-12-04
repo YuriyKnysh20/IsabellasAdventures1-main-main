@@ -23,10 +23,10 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip DeathSound;
     [Header("\t\t\t\tControll")]
     public Joystick joystick;
-    public GameObject arrow;
     [Header("\t\t\t\tOther")]
     public Vector2 move;
     public Transform groundCheck, shotPlace;
+    public GameObject arrow;
     public float speed, jump, hp, go;
     public bool isRight, isGrounded, coolDown, canHurt, canShoot, jumpBut;
 

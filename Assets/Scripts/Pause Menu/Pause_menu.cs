@@ -34,6 +34,11 @@ public class PauseMenu : MonoBehaviour
         savingControlChoice.SaveControlSetting();// for saving Control, save joystick or arrows
         Debug.Log("SaveControlSetting");
     }
+    public void ChooseControl()
+    {
+        savingControlChoice.SaveControlSetting();// for saving Control 
+        Debug.Log("SaveControlSetting");
+    }
     public void ShowPanelControlls() // calling when user clicked nastroiki  v pause menu
     {
         PanelControlls.SetActive(true);
