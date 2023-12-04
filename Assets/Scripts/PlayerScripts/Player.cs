@@ -16,22 +16,24 @@ public class Player : MonoBehaviour
     [SerializeField] public int _health;
     [SerializeField] private HealthPlayer healthBar;
     [SerializeField] private float damageForce;
+    [Header("\t\t\t\tSound")]
     [SerializeField] private AudioSource soundSource;
     [SerializeField] private AudioClip ArrowSound;
     [SerializeField] private AudioClip PlayerDamageWoman;
     [SerializeField] private AudioClip DeathSound;
-
+    [Header("\t\t\t\tControll")]
     public Joystick joystick;
-    private float moveInput;
-
-    private int _currentHealth;
-    private Rigidbody2D rigidboby;
-    private Animator anim;
     public GameObject arrow;
+    [Header("\t\t\t\tOther")]
     public Vector2 move;
     public Transform groundCheck, shotPlace;
     public float speed, jump, hp, go;
     public bool isRight, isGrounded, coolDown, canHurt, canShoot, jumpBut;
+
+    private float moveInput;
+    private int _currentHealth;
+    private Rigidbody2D rigidboby;
+    private Animator anim;
     private LevelSystem levelSystem;
     private UICharacterController controller;
 

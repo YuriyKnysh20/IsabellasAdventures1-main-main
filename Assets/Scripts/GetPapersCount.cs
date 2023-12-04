@@ -15,7 +15,7 @@ public class GetPapersCount : MonoBehaviour
         GameObject[] papersObjects = GameObject.FindGameObjectsWithTag("Papers");
         totalPapers = papersObjects.Length;
 
-        Debug.Log($"Found {totalPapers} papers in the scene.");
+       // Debug.Log($"Found {totalPapers} papers in the scene.");
     }
 
     public static void IncreaseCollectedPapers()

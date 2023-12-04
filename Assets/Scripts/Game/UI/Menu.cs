@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+
     /*Данный метод должен работать когда игра пройдена,при нажатии на кнопку должна не начинаться игра,а перекидывать в новосозданную сцену
     CharacterChoiceScene,она ещё не готова!*/
     /*public void LoadCharacterChoiceScreen()
@@ -15,7 +16,18 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(level);
     }*/
-
+    public GameObject PanelControlls;// for saving quest
+    public Savingcontrolchoice savingControlChoice;// for saving Control
+    public void ReturnToPouseMenu()// calling when user clicked Nazad v vibore upravlenia
+    {
+        PanelControlls.SetActive(false);
+        ChooseControl();
+    }
+    public void ChooseControl()
+    {
+        savingControlChoice.SaveControlSetting();// for saving Control 
+        Debug.Log("SaveControlSetting");
+    }
     public void OnClickLevels()
     {
         SceneManager.LoadScene("LevelSelection");

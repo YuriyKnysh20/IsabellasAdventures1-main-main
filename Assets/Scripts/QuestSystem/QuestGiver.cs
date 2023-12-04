@@ -21,11 +21,10 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private GameObject quests; // in this GO we will created a Quest
     [SerializeField] private string questType;// имя квеста например "KillWolfes" KillWolfes.cs
     private DialogueTrigger finishQuestDialogueTrigger;
-   
+
     #region For SaveData
     private void Awake()
     {
-        Debug.Log("Awake method called");
         LoadQuestProgress();
     }
     public void SaveQuestProgress()

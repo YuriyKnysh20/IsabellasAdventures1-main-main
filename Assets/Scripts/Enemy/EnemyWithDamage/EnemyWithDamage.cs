@@ -45,8 +45,7 @@ namespace Script.Enemy.EnemyWithDamage
             if (_currentHealth <= 0)
             {
                 StartCoroutine(StartDie());
-
-            }
+                            }
         }
         private IEnumerator StartDie()
         {

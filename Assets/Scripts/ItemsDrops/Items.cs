@@ -7,7 +7,7 @@ public class Items : MonoBehaviour
 
     private ItemsTypeID _typeID;
     private int _count;
-    
+
     public int Count
     {
         get => _count;
@@ -18,7 +18,7 @@ public class Items : MonoBehaviour
     {
         _typeID = typeID;
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent(out Bag bag))

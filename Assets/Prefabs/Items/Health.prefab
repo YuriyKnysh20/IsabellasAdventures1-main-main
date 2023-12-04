@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 511425314197456576}
   - component: {fileID: 6179229817321230458}
   - component: {fileID: 7359886886450470882}
+  - component: {fileID: 1353336633541265103}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -158,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1353336633541265103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083622501708253169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b2b35e9b6b6e54eba83dd7abc46ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 511425314197456576}
