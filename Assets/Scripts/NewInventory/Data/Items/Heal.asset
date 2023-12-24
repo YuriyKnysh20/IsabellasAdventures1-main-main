@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c337834e840c4504ca2183eda5b6238a, type: 3}
-  m_Name: New Asset Item
+  m_Name: Heal
   m_EditorClassIdentifier: 
-  _name: 
-  _uiIcon: {fileID: 21300000, guid: c96e311a768b7404ca9ebaedf0f141a3, type: 3}
+  _name: "\u0410\u043F\u0442\u0435\u0447\u043A\u0430"
+  _uiIcon: {fileID: 21300000, guid: 87787c87599f6174785400c878560cf5, type: 3}
+  _currentCount: 0
+  _maxCount: 10
