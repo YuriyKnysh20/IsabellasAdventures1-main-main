@@ -12,13 +12,22 @@ public class LevelSystem
 
     private int level;
     private int experience;
-
+    public int Level
+    {
+        get { return level; }
+        set { level = value; }
+    }
+    public int Experience
+    {
+        get { return experience; }
+        set { experience = value; }
+    }
     public LevelSystem()
     {
         level = 0;
         experience = 0;
     }
-
+   
     public void AddExperience(int amount)
     {
         if (!IsMaxLevel())

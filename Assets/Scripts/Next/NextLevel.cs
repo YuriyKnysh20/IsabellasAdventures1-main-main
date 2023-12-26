@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class NextLevel : MonoBehaviour
 {
+    private LevelSystem _levelSystem;
     int currentLevel;
     int levelUnlock;
     void Start()
@@ -31,6 +32,11 @@ public class NextLevel : MonoBehaviour
     }
     void Next()
     {
+        SaveExperience();
         SceneManager.LoadScene(currentLevel + 1);
+    }
+    public void SaveExperience()
+    {
+        SaveManager.Instance.SaveLevelProgress(_levelSystem.Level , _levelSystem.Experience);
     }
 }

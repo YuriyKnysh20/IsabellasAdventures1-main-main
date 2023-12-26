@@ -13,8 +13,8 @@ public class Inventory : MonoBehaviour
     //[SerializeField] private ItemsEjector _ejector;
     private void OnEnable()
     {
-        //LoadInventory();
         Render(Items, _itemsDatas);
+       LoadInventory();
     }
 
     private void OnDisable()
@@ -72,5 +72,6 @@ public class Inventory : MonoBehaviour
             cell.Ejecting += () => Destroy(cell.gameObject);// если произошел инжектинг мы удаляем этот квадратик на сцене 
             //cell.Ejecting += () => _ejector.EjectFromPool(item, _ejector.transform.position, _ejector.transform.right);
         }
+
     }
 }

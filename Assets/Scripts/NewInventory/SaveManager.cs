@@ -1,6 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
+[System.Serializable]
+public class InventoryData
+{
+    public List<AssetItem> items;
+    public List<ItemsData> itemsDatas;
+}
+public class ExperienceData
+{
+    public int level;
+    public int experience;
+}
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
@@ -20,8 +32,14 @@ public class SaveManager : MonoBehaviour
 
     public void SaveInventory(List<AssetItem> items, List<ItemsData> itemsDatas)
     {
-        PlayerPrefs.SetString("Items", JsonUtility.ToJson(items));
-        PlayerPrefs.SetString("ItemsDatas", JsonUtility.ToJson(itemsDatas));
+        InventoryData inventoryData = new InventoryData
+        {
+            items = items,
+            itemsDatas = itemsDatas
+        };
+
+        string json = JsonUtility.ToJson(inventoryData);
+        PlayerPrefs.SetString("InventoryData", json);
         PlayerPrefs.Save();
     }
 
@@ -30,16 +48,38 @@ public class SaveManager : MonoBehaviour
         items = new List<AssetItem>();
         itemsDatas = new List<ItemsData>();
 
-        if (PlayerPrefs.HasKey("Items"))
+        if (PlayerPrefs.HasKey("InventoryData"))
         {
-            string itemsJson = PlayerPrefs.GetString("Items");
-            items = JsonUtility.FromJson<List<AssetItem>>(itemsJson);
-        }
+            string json = PlayerPrefs.GetString("InventoryData");
+            InventoryData inventoryData = JsonUtility.FromJson<InventoryData>(json);
 
-        if (PlayerPrefs.HasKey("ItemsDatas"))
-        {
-            string itemsDatasJson = PlayerPrefs.GetString("ItemsDatas");
-            itemsDatas = JsonUtility.FromJson<List<ItemsData>>(itemsDatasJson);
+            items = inventoryData.items;
+            itemsDatas = inventoryData.itemsDatas;
         }
     }
+
+    public void SaveLevelProgress(int level, int exp)
+    {
+        ExperienceData expData = new ExperienceData
+        {
+            level = level,
+            experience = exp
+        };
+
+        string json = JsonUtility.ToJson(expData);
+        PlayerPrefs.SetString("ExperienceData", json);
+        PlayerPrefs.Save();
+    }
+    public void LoadLevelProgress(int level, int exp)
+    {
+        if (PlayerPrefs.HasKey("ExperienceData"))
+        {
+            string json = PlayerPrefs.GetString("ExperienceData");
+            ExperienceData experienceData = JsonUtility.FromJson<ExperienceData>(json);
+
+            level = experienceData.level;
+            exp = experienceData.experience;
+        }
+    }
+
 }

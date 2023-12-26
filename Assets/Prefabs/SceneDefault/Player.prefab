@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7784691889920957514}
   - component: {fileID: 3748664578605997554}
   - component: {fileID: 2718608630536875813}
-  - component: {fileID: 3116787701616213955}
+  - component: {fileID: 498134516401020966}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -245,7 +245,7 @@ MonoBehaviour:
   DeathSound: {fileID: 8300000, guid: 610c6fd256187af47909f0acd3fdfe42, type: 3}
   joystick: {fileID: 0}
   move: {x: 0, y: 0}
-  groundCheck: {fileID: 4596962766894100402}
+  groundCheck: {fileID: 0}
   shotPlace: {fileID: 4945034239084387962}
   arrow: {fileID: 1561747254708256, guid: f0442dee65347e34ba3569760a359643, type: 3}
   speed: 30
@@ -457,7 +457,7 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   fire: {fileID: 0}
---- !u!114 &3116787701616213955
+--- !u!114 &498134516401020966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

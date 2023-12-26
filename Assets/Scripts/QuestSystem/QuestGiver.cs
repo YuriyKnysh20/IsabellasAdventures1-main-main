@@ -39,7 +39,6 @@ public class QuestGiver : MonoBehaviour
     }
     private void OnApplicationQuit()
     {
-        Debug.Log("OnApplicationQuit method called");
         SaveQuestProgress();
     }
     #endregion
