@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class InventoryOLD : MonoBehaviour
 {
     [SerializeField] private List<AssetItem> Items;
     [SerializeField] private List<ItemsData> _itemsDatas;//assets/entities/items
@@ -14,12 +14,16 @@ public class Inventory : MonoBehaviour
     private void OnEnable()
     {
         Render(Items, _itemsDatas);
-       LoadInventory();
+        LoadInventory();
     }
-
     private void OnDisable()
     {
         SaveInventory();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Space))
+        { LoadInventory(); }
     }
     private void SaveInventory()
     {
