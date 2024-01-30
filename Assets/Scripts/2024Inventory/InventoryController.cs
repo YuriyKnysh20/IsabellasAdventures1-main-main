@@ -14,10 +14,10 @@ namespace Inventory
         [SerializeField] private UI.UIInventoryPage inventoryUI;
         [SerializeField] private Model.InventorySO inventoryData;
         public List<InventoryItem> initialItems = new List<InventoryItem>();// дл€ заполнени€ начальных елементов
-        //  [SerializeField] private AudioClip dropClip;    [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip dropClip;
+        [SerializeField] private AudioSource audioSource;
         private void Start()
         {
-            // inventoryUI.InitializeInventoryUI(inventoryData.Size);
             PrepareUI();
             PrepareInventoryData();
         }
@@ -71,26 +71,28 @@ namespace Inventory
             if (inventoryItem.IsEmpty)
                 return;
 
-            //IItemAction itemAction = inventoryItem.item as IItemAction;
-            //if (itemAction != null)
-            //{
-
-            //    inventoryUI.ShowItemAction(itemIndex);
-            //    inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
-            //}
-
-            //IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
-            //if (destroyableItem != null)
-            //{
-            //    inventoryUI.AddAction("Drop", () => DropItem(itemIndex, inventoryItem.quantity));
-            //}
-
+            IItemAction itemAction = inventoryItem.item as IItemAction;
+            if (itemAction != null)
+            {
+                inventoryUI.ShowItemAction(itemIndex);
+                inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
+                //л€мбда выражение означает что вызоветс€ метод когда мы нажмем эту кнопку
+            }
+            //ищем айтем который можно уничтожить
+            IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
+            if (destroyableItem != null)
+            {
+                inventoryUI.AddAction("Drop", () => DropItem(itemIndex, inventoryItem.quantity));
+                // на кнопке будет написано Drop и вызоветс€ метод выброса предмета 
+            }
         }
         private void DropItem(int itemIndex, int quantity)
         {
+            //удал€ем предмет инвентар€ по индексу указав его кол-во
+            //так же отмен€ем выбор элемента в юай(скроет описание предмета и рамку что предмет выбран.
             inventoryData.RemoveItem(itemIndex, quantity);
             inventoryUI.ResetSelection();
-            // audioSource.PlayOneShot(dropClip);
+             audioSource.PlayOneShot(dropClip);
         }
         public void PerformAction(int itemIndex)
         {
@@ -98,20 +100,21 @@ namespace Inventory
             if (inventoryItem.IsEmpty)
                 return;
 
-            //IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
-            //if (destroyableItem != null)
-            //{
-            //    inventoryData.RemoveItem(itemIndex, 1);
-            //}
+            IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
+            if (destroyableItem != null)
+            {
+                inventoryData.RemoveItem(itemIndex, 1);
+            }
 
-            //IItemAction itemAction = inventoryItem.item as IItemAction;
-            //if (itemAction != null)
-            //{
-            //    itemAction.PerformAction(gameObject, inventoryItem.itemState);
-            //   // audioSource.PlayOneShot(itemAction.actionSFX);
-            //    if (inventoryData.GetItemAt(itemIndex).IsEmpty)
-            //        inventoryUI.ResetSelection();
-            //}
+            IItemAction itemAction = inventoryItem.item as IItemAction;
+            if (itemAction != null)
+            {
+                itemAction.PerformAction(gameObject, inventoryItem.itemState);
+                 audioSource.PlayOneShot(itemAction.actionSFX);
+                if (inventoryData.GetItemAt(itemIndex).IsEmpty)
+       // если €чейка пуста€(там уже нет итема), снимаем выделение, скрываем панель действий, описание.
+                    inventoryUI.ResetSelection();
+            }
         }
         private void HandleDragging(int itemIndex)
         {
@@ -140,16 +143,21 @@ namespace Inventory
         }
         private string PrepareDescription(InventoryItem inventoryItem)
         {
+            //append добавл€ет описание, передаем ему дескрипшн итема.
             StringBuilder sb = new StringBuilder();
             sb.Append(inventoryItem.item.Description);
-            sb.AppendLine();
-            //for (int i = 0; i < inventoryItem.itemState.Count; i++)
-            //{
-            //    sb.Append($"{inventoryItem.itemState[i].itemParameter.ParameterName} " +
-            //        $": {inventoryItem.itemState[i].value} / " +
-            //        $"{inventoryItem.item.DefaultParametersList[i].value}");
-            //    sb.AppendLine();
-            //}
+            sb.AppendLine();// создает новую строку
+            for (int i = 0; i < inventoryItem.itemState.Count; i++)
+            {
+                //получаем название параметра
+                //itemstate.value состо€ние предмета, где валюе его дурабилити(долговечность)
+                //дефолт параметрс показывает сколько стоит значение по дефолту
+                // по итогу получаем строку примерно такую: "Durability 5/10"
+                sb.Append($"{inventoryItem.itemState[i].itemParameter.ParameterName} " +
+                    $": {inventoryItem.itemState[i].value} / " +
+                    $"{inventoryItem.item.DefaultParametersList[i].value}");
+                sb.AppendLine();
+            }
             return sb.ToString();
         }
     }

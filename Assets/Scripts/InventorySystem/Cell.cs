@@ -6,7 +6,7 @@ using System;
 public class Cell : MonoBehaviour
 {
     [SerializeField] private Image icon;
-    private Item item;
+    private Itemm item;
     public Action OnUpdateCell;
 
     private void Awake()
@@ -14,7 +14,7 @@ public class Cell : MonoBehaviour
         icon.sprite = null;
     }
 
-    public void Init(Item item)
+    public void Init(Itemm item)
     {
         this.item = item;
         if (item == null)

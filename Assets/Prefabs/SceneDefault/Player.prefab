@@ -118,6 +118,8 @@ GameObject:
   - component: {fileID: 2718608630536875813}
   - component: {fileID: 498134516401020966}
   - component: {fileID: 2647842471845725947}
+  - component: {fileID: 7811377408957837043}
+  - component: {fileID: 4532283760204488513}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -240,6 +242,7 @@ MonoBehaviour:
   _health: 100
   healthBar: {fileID: 0}
   damageForce: 150
+  _currentHealth: 0
   soundSource: {fileID: 4949505965668184169}
   ArrowSound: {fileID: 8300000, guid: 338625058a95bc443b416fa3d7391014, type: 3}
   PlayerDamageWoman: {fileID: 8300000, guid: 610c6fd256187af47909f0acd3fdfe42, type: 3}
@@ -483,5 +486,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
-  dropClip: {fileID: 0}
-  audioSource: {fileID: 0}
+  inventoryData: {fileID: 11400000, guid: ed4f807dce97f0b46b0fae620b485251, type: 2}
+  initialItems: []
+  dropClip: {fileID: 8300000, guid: ccdcda816ac5a254ca4caaf76134735f, type: 3}
+  audioSource: {fileID: 4949505965668184169}
+--- !u!114 &7811377408957837043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951106870266714472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77deee46a0edb348aba466b302b70d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 11400000, guid: ed4f807dce97f0b46b0fae620b485251, type: 2}
+--- !u!114 &4532283760204488513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951106870266714472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec46ad6a76aed794488ac647ab76b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  inventoryData: {fileID: 11400000, guid: ed4f807dce97f0b46b0fae620b485251, type: 2}
+  parametersToModify:
+  - itemParameter: {fileID: 11400000, guid: 4cfac9e80e67e8244a88c0e574fcae99, type: 2}
+    value: -10
+  itemCurrentState: []

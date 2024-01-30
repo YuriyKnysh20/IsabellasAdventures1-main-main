@@ -9,12 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09deb29c9e1574642bb020e217b471af, type: 3}
+  m_Script: {fileID: 11500000, guid: bc5e21f4507945846b0b93aecff89066, type: 3}
   m_Name: Aptechka
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 99
-  <Name>k__BackingField: heal
-  <Description>k__BackingField: 'heal you '
+  <Name>k__BackingField: Aptechka
+  <Description>k__BackingField: Restore Health
   <ItemImage>k__BackingField: {fileID: 21300000, guid: a57ebbe876fad994aba697b7e761f784,
+    type: 3}
+  <DefaultParametersList>k__BackingField: []
+  modifiersData:
+  - statModifier: {fileID: 11400000, guid: 0d32a6c153147c7498cb8387ee4879c2, type: 2}
+    value: 5
+  <actionSFX>k__BackingField: {fileID: 8300000, guid: d8622348b38b76d40954ea965ffaba4c,
     type: 3}

@@ -19,15 +19,17 @@ namespace Inventory.Model
                 inventoryItems.Add(InventoryItem.GetEmptyItem());
             }
         }
-        public int AddItem(ItemSO item, int quantity)//, List<ItemParameter> itemState = null)
+        public int AddItem(ItemSO item, int quantity, List<ItemParameter> itemState = null)
         {
             if (item.IsStackable == false)
             {
                 for (int i = 0; i < inventoryItems.Count; i++)
                 {
+                    // пока кол-во больше нуля и инвентарь не полный
+                    // выполняем логику добавления предметов в инвентарь
                     while (quantity > 0 && IsInventoryFull() == false)
                     {
-                        //quantity -= AddItemToFirstFreeSlot(item, 1, itemState);
+                        quantity -= AddItemToFirstFreeSlot(item, 1, itemState);
                     }
                     InformAboutChange();
                     return quantity;
@@ -37,20 +39,22 @@ namespace Inventory.Model
             InformAboutChange();
             return quantity;
         }
-        private int AddItemToFirstFreeSlot(ItemSO item, int quantity
-        )//, List<ItemParameter> itemState = null)
+        private int AddItemToFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
         {
-            InventoryItem newItem = new InventoryItem
+            InventoryItem newItem = new InventoryItem//элемент который мы хочем добавить
             {
                 item = item,
                 quantity = quantity,
-                // itemState =            new List<ItemParameter>(itemState == null ? item.DefaultParametersList : itemState)
+                itemState 
+         = new List<ItemParameter>(itemState == null ? item.DefaultParametersList : itemState)
+         //если состояние элемента налл, то возвращаем дефолтные значения
+         //если не нул, то используем параметры описанные в айтемстейт и сохраняем их в лист
             };
 
             for (int i = 0; i < inventoryItems.Count; i++)
             {
                 if (inventoryItems[i].IsEmpty)
-                {
+                {// если слот пустой  вставляем в эту клетку елемент который хотим добавить
                     inventoryItems[i] = newItem;
                     return quantity;
                 }
@@ -59,25 +63,35 @@ namespace Inventory.Model
         }
         private bool IsInventoryFull()
         => inventoryItems.Where(item => item.IsEmpty).Any() == false;
+        //получаем все предметы инвентаря где пустой айтем
         private int AddStackableItem(ItemSO item, int quantity)
         {
             for (int i = 0; i < inventoryItems.Count; i++)
             {
                 if (inventoryItems[i].IsEmpty)
-                    continue;
+                    continue; // если слот пустой, итем не стакается, пропускаем итерацию цикл
                 if (inventoryItems[i].item.ID == item.ID)
                 {
+                    // чек текущий элемент и если он равен итему который мы хотим застекать выполняем логику
                     int amountPossibleToTake =
-                        inventoryItems[i].item.MaxStackSize - inventoryItems[i].quantity;
-
+        inventoryItems[i].item.MaxStackSize - inventoryItems[i].quantity;
+                    //99-70=29
+                    //высчитали кол-во которые можем взять
+                    //отняв от макс кол-ва количество которое уже имеем
+                    //вычислили сколько предметов можно поместить в этот слот
                     if (quantity > amountPossibleToTake)
                     {
+                        //если  кол-во которое нужно добавить больше чем кол-во которое можем взять
+                        //то меняем кол-во в ячейке на макссайз который может поместиться в ячейке
                         inventoryItems[i] = inventoryItems[i]
                             .ChangeQuantity(inventoryItems[i].item.MaxStackSize);
                         quantity -= amountPossibleToTake;
                     }
                     else
                     {
+                        // а если кол-во которое нужно добавить 10, а можем взять еще 90
+                        // то добавляемв в эту ячейку 10 штук плюсуя их с теми что уже там были
+                        // информируем об изменениях и возвращаем ноль.
                         inventoryItems[i] = inventoryItems[i]
                             .ChangeQuantity(inventoryItems[i].quantity + quantity);
                         InformAboutChange();
@@ -85,6 +99,10 @@ namespace Inventory.Model
                     }
                 }
             }
+            // если же после добавления предметов в ячейку остались предметы и инвентарь не полный
+            //вычисляем сколько можно добавить в новый слот
+            // далее минусуем от кол-ва число которое добавлено в новую ячейку
+            // и добавляем вычисленное кол-во в первый свободный слот.
             while (quantity > 0 && IsInventoryFull() == false)
             {
                 int newQuantity = Mathf.Clamp(quantity, 0, item.MaxStackSize);
@@ -95,18 +113,22 @@ namespace Inventory.Model
         }
         public void RemoveItem(int itemIndex, int amount)
         {
+            //проверяем есть ли этот индекс в нашем списке
+            //например если пришел индекс 6, а у нас всего 5 элементов, то ничего не произойдет
             if (inventoryItems.Count > itemIndex)
             {
-                if (inventoryItems[itemIndex].IsEmpty)
+                if (inventoryItems[itemIndex].IsEmpty)// проверка пустой ли элемент, если элемент пустой, то мы его не можем выкинуть
                     return;
+                // Например нужно удалить третий элемент, в кол-ве 5 штук. узнаем кол-во(к примеру их 70.70-5, ремайндер=65
+                // проверяем кол-во оставшихся, если их меньше нуля создается пустая ячейка.
+                // если больше нуля-меняем кол-во
                 int reminder = inventoryItems[itemIndex].quantity - amount;
                 if (reminder <= 0)
                     inventoryItems[itemIndex] = InventoryItem.GetEmptyItem();
                 else
                     inventoryItems[itemIndex] = inventoryItems[itemIndex]
                         .ChangeQuantity(reminder);
-
-                InformAboutChange();
+                InformAboutChange();// оповещаем юай об изменениях
             }
         }
         public void AddItem(InventoryItem item)
@@ -133,10 +155,10 @@ namespace Inventory.Model
         }
         public void SwapItems(int itemIndex_1, int itemIndex_2)
         {
-   //передается к примеру инджекс 2 и 4,
-    //присваиваем локальной переменной инв.айтем второй елемент из списка инвентори айтемс
-    //ставим  второму элементу значение 4-того элемента из списка
-    //ставим на четвертое место в списке элемент который был на втором месте.
+            //передается к примеру инджекс 2 и 4,
+            //присваиваем локальной переменной инв.айтем второй елемент из списка инвентори айтемс
+            //ставим  второму элементу значение 4-того элемента из списка
+            //ставим на четвертое место в списке элемент который был на втором месте.
             InventoryItem item1 = inventoryItems[itemIndex_1];
             inventoryItems[itemIndex_1] = inventoryItems[itemIndex_2];
             inventoryItems[itemIndex_2] = item1;
@@ -154,7 +176,7 @@ namespace Inventory.Model
     {
         public int quantity;
         public ItemSO item;
-        // public List<ItemParameter> itemState;
+        public List<ItemParameter> itemState;
         public bool IsEmpty => item == null;
 
         public InventoryItem ChangeQuantity(int newQuantity)
@@ -163,16 +185,16 @@ namespace Inventory.Model
             {
                 item = this.item,
                 quantity = newQuantity,
-                //itemState = new List<ItemParameter>(this.itemState)
+                itemState = new List<ItemParameter>(this.itemState)
             };
         }
 
         public static InventoryItem GetEmptyItem()
-            => new InventoryItem
+            => new()
             {
                 item = null,
                 quantity = 0,
-                // itemState = new List<ItemParameter>()
+                itemState = new List<ItemParameter>()
             };
     }
 }

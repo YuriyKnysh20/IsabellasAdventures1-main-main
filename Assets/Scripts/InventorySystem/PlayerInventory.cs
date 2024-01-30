@@ -11,9 +11,9 @@ public class PlayerInventory : MonoBehaviour
     
     public int coinsCount;
     public BuffReciever buffReciever;
-    private List<Item> items;
+    private List<Itemm> items;
 
-    public List<Item> Items
+    public List<Itemm> Items
     {
         get { return items; }
     }
@@ -22,7 +22,7 @@ public class PlayerInventory : MonoBehaviour
     {
         GameManager.Instance.inventory = this;
         coinsText.text = coinsCount.ToString();
-        items = new List<Item>();
+        items = new List<Itemm>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)

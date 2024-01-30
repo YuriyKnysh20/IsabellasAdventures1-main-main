@@ -5,17 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item Database", menuName = "Databases/Items")]
 public class ItemBase : ScriptableObject
 {
-    [SerializeField, HideInInspector] private List<Item> items;
+    [SerializeField, HideInInspector] private List<Itemm> items;
 
-    [SerializeField] Item currentItem;
+    [SerializeField] Itemm currentItem;
     private int currentIndex;
 
     public void CreateItem()
     {
         if (items == null)
-            items = new List<Item>();
+            items = new List<Itemm>();
 
-        Item item = new Item();
+        Itemm item = new Itemm();
         items.Add(item);
         currentItem = item;
         currentIndex = items.Count - 1;
@@ -55,14 +55,14 @@ public class ItemBase : ScriptableObject
         }
     }
 
-    public Item GetItemOfID(int id)
+    public Itemm GetItemOfID(int id)
     {
         return items.Find(t => t.ID == id);
     }
 }
 
 [System.Serializable]
-public class Item
+public class Itemm
 {
     [SerializeField] private int id;
 

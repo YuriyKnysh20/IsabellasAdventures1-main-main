@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] public int _health;
     [SerializeField] private HealthPlayer healthBar;
     [SerializeField] private float damageForce;
+    [SerializeField] private int _currentHealth;
     [Header("\t\t\t\tSound")]
     [SerializeField] private AudioSource soundSource;
     [SerializeField] private AudioClip ArrowSound;
@@ -31,7 +32,6 @@ public class Player : MonoBehaviour
     public bool isRight, isGrounded, coolDown, canHurt, canShoot, jumpBut;
 
     private float moveInput;
-    private int _currentHealth;
     private Rigidbody2D rigidboby;
     private Animator anim;
     private LevelSystem levelSystem;
@@ -55,34 +55,28 @@ public class Player : MonoBehaviour
         _currentHealth = _health;
         HealthTextChanged?.Invoke(_currentHealth, _health);
     }
-
     private void Awake()
     {
         Instance = this;
     }
-
     public void InitUIController(UICharacterController uiController)
     {
         controller = uiController;
     }
-
     public void SetLevelSystem(LevelSystem levelSystem)
     {
         this.levelSystem = levelSystem;
 
         levelSystem.OnLevelChanged += LevelSystem_OnLevelChanged;
     }
-
     private void LevelSystem_OnLevelChanged(object sender, EventArgs e)
     {
         SetHealthBarSize(1f + levelSystem.GetLevelNumber() * .1f);
     }
-
     private void SetHealthBarSize(float healthBarSize)
     {
         transform.Find("Health").localScale = new Vector3(.7f * healthBarSize, 1, 1);
     }
-
     private void FixedUpdate()
     {
         if (transform.position.y < -15)
@@ -167,7 +161,6 @@ public class Player : MonoBehaviour
         if (move.x < 0)
             transform.localScale = new Vector2(-1, 1);
     }
-
     private void Go()
     {
         //life.fillAmount = hp / 100;
@@ -205,20 +198,16 @@ public class Player : MonoBehaviour
             rigidboby.velocity = new Vector2(0, 0);
         }
     }
-
     public bool j;
     public int jit = 0;
-
     public void JButDown()
     {
         jumpBut = true;
     }
-
     public void JButUp()
     {
         jumpBut = false;
     }
-
     void Jump()
     {
         anim.SetBool("isGrounded", isGrounded);
@@ -250,13 +239,11 @@ public class Player : MonoBehaviour
             jit = 0;
         }
     }
-
     void GroundCheck()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, LayerMask.GetMask("Ground"));
         //isWalled = Physics2D.OverlapCapsule(wallCheck.position, new Vector2(1f, 2f), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Ground"));
     }
-
     public void ShootBut()
     {
         if (canShoot == true && isGrounded == true)
@@ -269,7 +256,6 @@ public class Player : MonoBehaviour
             StartCoroutine(ShootCoolDown());
         }
     }
-
     public void Shoot()
     {
         if (transform.localScale.x == 1)
@@ -281,13 +267,11 @@ public class Player : MonoBehaviour
             Instantiate(arrow, shotPlace.position, Quaternion.Euler(0, 180, 0));
         }
     }
-
     IEnumerator ShootCoolDown()
     {
         yield return new WaitForSeconds(0.5f);
         canShoot = true;
     }
-
     IEnumerator Hurt()
     {
         if (hp > 0)
@@ -297,7 +281,12 @@ public class Player : MonoBehaviour
             canHurt = true;
         }
     }
-
+    public void AddHealth(int value)// метод для добавления здоровья игроку, вызывается при поедании хила из инвентаря
+    {
+        _currentHealth += value;
+        HealthChanged?.Invoke(_currentHealth, _health);
+        HealthTextChanged?.Invoke(_currentHealth, _health);
+    }
     public void ApplyDamage(int damage)
     {
         _currentHealth -= damage;
@@ -315,7 +304,6 @@ public class Player : MonoBehaviour
             StartCoroutine(PlayerDie());
         }
     }
-
     IEnumerator PlayerDie()
     {
         soundSource.PlayOneShot(DeathSound);
@@ -323,7 +311,6 @@ public class Player : MonoBehaviour
         Destroy(gameObject, 0.8f);
         Die();
     }
-
     private void Die()
     {
         StopCoroutine(Hurt());

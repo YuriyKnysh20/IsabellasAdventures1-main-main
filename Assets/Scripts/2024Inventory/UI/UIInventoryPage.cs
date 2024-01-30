@@ -16,8 +16,7 @@ namespace Inventory.UI
         private int currentlyDraggedItemIndex = -1;
         public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStartDragging;
         public event Action<int, int> OnSwapItems;
-
-        //[SerializeField] private ItemActionPanel actionPanel;
+        [SerializeField] private ItemActionPanell actionPanel;
         private void Awake()
         {
             Hide();
@@ -30,6 +29,7 @@ namespace Inventory.UI
             {
                 UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
                 uiItem.transform.SetParent(contentPanel);
+                uiItem.transform.localScale = Vector3.one;
                 listOfUIItems.Add(uiItem);
                 uiItem.OnItemClicked += HandleItemSelection;
                 uiItem.OnItemBeginDrag += HandleBeginDrag;
@@ -61,16 +61,13 @@ namespace Inventory.UI
         }
         private void HandleShowItemActions(UIInventoryItem inventoryItemUI)
         {
+            //получаем ссылку на элемент на который кликнули правой кнопкой мыши
             int index = listOfUIItems.IndexOf(inventoryItemUI);
             if (index == -1)
             {
                 return;
             }
             OnItemActionRequested?.Invoke(index);
-        }
-        private void HandleEndDrag(UIInventoryItem inventoryItemUI)
-        {
-            ResetDraggedItem();
         }
         private void HandleSwap(UIInventoryItem inventoryItemUI)
         {
@@ -80,7 +77,11 @@ namespace Inventory.UI
                 return;
             }
             OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
-            HandleItemSelection(inventoryItemUI);
+            HandleItemSelection(inventoryItemUI);// передаем индекс.
+        }
+        private void HandleEndDrag(UIInventoryItem inventoryItemUI)
+        {
+            ResetDraggedItem();
         }
         private void ResetDraggedItem()
         {
@@ -121,12 +122,15 @@ namespace Inventory.UI
         }
         public void AddAction(string actionName, Action performAction)
         {
-            //actionPanel.AddButon(actionName, performAction);
+            //принимает имя действия и действие делегат. что мы хотим сделать нажав на этот элемент
+            actionPanel.AddButon(actionName, performAction);
         }
         public void ShowItemAction(int itemIndex)
         {
-            //actionPanel.Toggle(true);
-            //actionPanel.transform.position = listOfUIItems[itemIndex].transform.position;
+            //показываем панель, размещая ее в позицию текущего элемента. то есть нажали на второй элемент в списке инвентаря
+            //значит на месте второго элемента показывается панель поверх него
+            actionPanel.Toggle(true);
+            actionPanel.transform.position = listOfUIItems[itemIndex].transform.position;
         }
         private void DeselectAllItems()
         {
@@ -134,12 +138,11 @@ namespace Inventory.UI
             {
                 item.Deselect();
             }
-            //actionPanel.Toggle(false);
+            actionPanel.Toggle(false);
         }
-
         public void Hide()
         {
-            //actionPanel.Toggle(false);
+            actionPanel.Toggle(false); //скрываем панель действий
             gameObject.SetActive(false);
             ResetDraggedItem();
         }

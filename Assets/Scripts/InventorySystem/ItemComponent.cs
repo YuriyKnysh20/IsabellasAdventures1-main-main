@@ -7,9 +7,9 @@ public class ItemComponent : MonoBehaviour, IObjectDestroyer
     [SerializeField] private ItemType type;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
-    private Item item;
+    private Itemm item;
 
-    public Item Item
+    public Itemm Item
     {
         get { return item; }
     }
