@@ -17,6 +17,7 @@ namespace Inventory.UI
         public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStartDragging;
         public event Action<int, int> OnSwapItems;
         [SerializeField] private ItemActionPanell actionPanel;
+        [SerializeField] private GameObject _closebutton;
         private void Awake()
         {
             Hide();
@@ -113,7 +114,9 @@ namespace Inventory.UI
         public void Show()
         {
             gameObject.SetActive(true);
-            ResetSelection();
+            _closebutton.SetActive(true);
+             ResetSelection();
+            Time.timeScale = 0f;// останавливаем время
         }
         public void ResetSelection()
         {
@@ -143,8 +146,10 @@ namespace Inventory.UI
         public void Hide()
         {
             actionPanel.Toggle(false); //скрываем панель действий
-            gameObject.SetActive(false);
+            gameObject.SetActive(false);//скрываем инвентарь
+            _closebutton.SetActive(false);//скрываем крестик закрытия инвентаря
             ResetDraggedItem();
+            Time.timeScale = 1f;// возвращаем время в режим реального
         }
     }
 }

@@ -120,8 +120,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3332115701930013996}
   m_HandleRect: {fileID: 5935807811972277187}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1237,10 +1237,8 @@ MonoBehaviour:
   contentPanel: {fileID: 4094284346058628778}
   itemDescription: {fileID: 4581092281756827000}
   mouseFollower: {fileID: 0}
-  image: {fileID: 21300000, guid: 1403ecbd191ddff449ed089701549286, type: 3}
-  quantity: 1
-  title: 2243
-  description: some thing
+  actionPanel: {fileID: 0}
+  _closebutton: {fileID: 0}
 --- !u!1 &7955580805398074181
 GameObject:
   m_ObjectHideFlags: 0

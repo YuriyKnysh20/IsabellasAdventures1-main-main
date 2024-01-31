@@ -16,27 +16,32 @@ namespace Inventory
         public List<InventoryItem> initialItems = new List<InventoryItem>();// дл€ заполнени€ начальных елементов
         [SerializeField] private AudioClip dropClip;
         [SerializeField] private AudioSource audioSource;
+        [SerializeField] private Canvas HudCanvas;
         private void Start()
         {
             PrepareUI();
             PrepareInventoryData();
         }
-        public void Update()
+        public void OpenCloseInventory()
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            if (inventoryUI.isActiveAndEnabled == false)
             {
-                if (inventoryUI.isActiveAndEnabled == false)
+                inventoryUI.Show();
+                HudCanvas.gameObject.SetActive(false);
+                foreach (var item in inventoryData.GetCurrentInventoryState())
                 {
-                    inventoryUI.Show();
-                    foreach (var item in inventoryData.GetCurrentInventoryState())
-                    {
-                        // возвращает диктионари, кей=индекс айтема,валюэ структура(итем—ќ и кол-во)
-                        inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
-                    }
+                    // возвращает диктионари, кей=индекс айтема,валюэ структура(итем—ќ и кол-во)
+                    inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
                 }
-                else { inventoryUI.Hide(); }
             }
+            else
+            {
+                inventoryUI.Hide();
+                HudCanvas.gameObject.SetActive(true);
+            }
+
         }
+
         private void PrepareInventoryData()
         {
             inventoryData.Initialize();
@@ -92,7 +97,7 @@ namespace Inventory
             //так же отмен€ем выбор элемента в юай(скроет описание предмета и рамку что предмет выбран.
             inventoryData.RemoveItem(itemIndex, quantity);
             inventoryUI.ResetSelection();
-             audioSource.PlayOneShot(dropClip);
+            audioSource.PlayOneShot(dropClip);
         }
         public void PerformAction(int itemIndex)
         {
@@ -110,9 +115,9 @@ namespace Inventory
             if (itemAction != null)
             {
                 itemAction.PerformAction(gameObject, inventoryItem.itemState);
-                 audioSource.PlayOneShot(itemAction.actionSFX);
+                audioSource.PlayOneShot(itemAction.actionSFX);
                 if (inventoryData.GetItemAt(itemIndex).IsEmpty)
-       // если €чейка пуста€(там уже нет итема), снимаем выделение, скрываем панель действий, описание.
+                    // если €чейка пуста€(там уже нет итема), снимаем выделение, скрываем панель действий, описание.
                     inventoryUI.ResetSelection();
             }
         }
