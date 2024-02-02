@@ -1,6 +1,4 @@
 using Inventory.UI;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseFollower : MonoBehaviour
@@ -20,17 +18,15 @@ public class MouseFollower : MonoBehaviour
     {
         Vector2 position;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            (RectTransform)canvas.transform,
-            Input.mousePosition,
-            canvas.worldCamera,
-            out position
-                );
+            (RectTransform)canvas.transform, Input.mousePosition,
+            canvas.worldCamera, out position);
+       // Debug.Log($"Mouse Position: {Input.mousePosition}, Local Position: {position}");
         transform.position = canvas.transform.TransformPoint(position);
     }
 
     public void Toggle(bool val)
     {
-        Debug.Log($"Item toggled {val}");
+          Debug.Log($"Item toggled {val}");
         gameObject.SetActive(val);
     }
 }

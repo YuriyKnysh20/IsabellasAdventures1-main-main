@@ -19,6 +19,7 @@ namespace Inventory.UI
         {
             ResetData();
             Deselect();
+
         }
         public void ResetData()
         {

@@ -109,10 +109,10 @@ GameObject:
   - component: {fileID: 4945258941697096538}
   - component: {fileID: 5063175430790955144}
   - component: {fileID: 4900906026215414954}
-  - component: {fileID: 4983172738737953666}
+  - component: {fileID: 1538794852792881571}
   - component: {fileID: 5035905958168463178}
   - component: {fileID: 4949505965668184169}
-  - component: {fileID: 1538794852792881571}
+  - component: {fileID: 4983172738737953666}
   - component: {fileID: 7784691889920957514}
   - component: {fileID: 3748664578605997554}
   - component: {fileID: 2718608630536875813}
@@ -223,47 +223,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4983172738737953666
-MonoBehaviour:
+--- !u!70 &1538794852792881571
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4951106870266714472}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 981c596a9e519d048a878026d8b7d9ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KBForce: 6
-  KBCounter: 1
-  KBTotalTime: 1
-  KnockFromRight: 0
-  _health: 100
-  healthBar: {fileID: 0}
-  damageForce: 150
-  _currentHealth: 0
-  soundSource: {fileID: 4949505965668184169}
-  ArrowSound: {fileID: 8300000, guid: 338625058a95bc443b416fa3d7391014, type: 3}
-  PlayerDamageWoman: {fileID: 8300000, guid: 610c6fd256187af47909f0acd3fdfe42, type: 3}
-  DeathSound: {fileID: 8300000, guid: 610c6fd256187af47909f0acd3fdfe42, type: 3}
-  joystick: {fileID: 0}
-  move: {x: 0, y: 0}
-  groundCheck: {fileID: 0}
-  shotPlace: {fileID: 4945034239084387962}
-  arrow: {fileID: 1561747254708256, guid: f0442dee65347e34ba3569760a359643, type: 3}
-  speed: 30
-  jump: 20
-  hp: 0
-  go: 0
-  isRight: 0
-  isGrounded: 0
-  coolDown: 0
-  canHurt: 0
-  canShoot: 0
-  jumpBut: 0
-  j: 0
-  jit: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6022146, y: -0.051617622}
+  m_Size: {x: 4.2979884, y: 11.845144}
+  m_Direction: 0
 --- !u!95 &5035905958168463178
 Animator:
   serializedVersion: 5
@@ -382,41 +376,47 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!70 &1538794852792881571
-CapsuleCollider2D:
+--- !u!114 &4983172738737953666
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4951106870266714472}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.6022146, y: -0.051617622}
-  m_Size: {x: 4.2979884, y: 11.845144}
-  m_Direction: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c596a9e519d048a878026d8b7d9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KBForce: 6
+  KBCounter: 1
+  KBTotalTime: 1
+  KnockFromRight: 0
+  _health: 100
+  healthBar: {fileID: 0}
+  damageForce: 150
+  _currentHealth: 0
+  soundSource: {fileID: 4949505965668184169}
+  ArrowSound: {fileID: 8300000, guid: 338625058a95bc443b416fa3d7391014, type: 3}
+  PlayerDamageWoman: {fileID: 8300000, guid: 610c6fd256187af47909f0acd3fdfe42, type: 3}
+  DeathSound: {fileID: 8300000, guid: 610c6fd256187af47909f0acd3fdfe42, type: 3}
+  joystick: {fileID: 0}
+  move: {x: 0, y: 0}
+  groundCheck: {fileID: 0}
+  shotPlace: {fileID: 4945034239084387962}
+  arrow: {fileID: 1561747254708256, guid: f0442dee65347e34ba3569760a359643, type: 3}
+  speed: 30
+  jump: 20
+  hp: 0
+  go: 0
+  isRight: 0
+  isGrounded: 0
+  coolDown: 0
+  canHurt: 0
+  canShoot: 0
+  jumpBut: 0
+  j: 0
+  jit: 0
 --- !u!114 &7784691889920957514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +490,7 @@ MonoBehaviour:
   initialItems: []
   dropClip: {fileID: 8300000, guid: ccdcda816ac5a254ca4caaf76134735f, type: 3}
   audioSource: {fileID: 4949505965668184169}
+  HudCanvas: {fileID: 0}
 --- !u!114 &7811377408957837043
 MonoBehaviour:
   m_ObjectHideFlags: 0
