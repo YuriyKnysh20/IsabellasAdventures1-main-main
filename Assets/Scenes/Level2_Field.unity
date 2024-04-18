@@ -4710,6 +4710,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2647842471845725947, guid: 031e7a18a83b9ea4ead537911d359123,
+        type: 3}
+      propertyPath: HudCanvas
+      value: 
+      objectReference: {fileID: 2430766511861161915}
     - target: {fileID: 2718608630536875813, guid: 031e7a18a83b9ea4ead537911d359123,
         type: 3}
       propertyPath: fire
@@ -5209,7 +5214,7 @@ Transform:
   m_GameObject: {fileID: 1804527497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.604595, y: 9.4817, z: -10}
+  m_LocalPosition: {x: -32.684624, y: 9.48166, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6590,7 +6595,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2430766511861161915}
+      objectReference: {fileID: 0}
     - target: {fileID: 5093926824152862979, guid: bd649a87a87a08049a78a5d6a6dc3318,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -6731,9 +6736,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd649a87a87a08049a78a5d6a6dc3318, type: 3}
---- !u!1 &2430766511861161915 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8376569941314561630, guid: bd649a87a87a08049a78a5d6a6dc3318,
+--- !u!223 &2430766511861161915 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5720807437300436008, guid: bd649a87a87a08049a78a5d6a6dc3318,
     type: 3}
   m_PrefabInstance: {fileID: 2430766511861161914}
   m_PrefabAsset: {fileID: 0}

@@ -290,12 +290,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1186404381}
   m_SourcePrefab: {fileID: 100100000, guid: e77b0ff6b533fac40a62848f72b047f6, type: 3}
---- !u!1 &524228292 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8376569941314561630, guid: bd649a87a87a08049a78a5d6a6dc3318,
-    type: 3}
-  m_PrefabInstance: {fileID: 1709812439}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589420229
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +645,7 @@ Transform:
   m_GameObject: {fileID: 687745359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.231358, y: 15.92912, z: -35}
+  m_LocalPosition: {x: -37.057617, y: 15.91229, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1809,6 +1803,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 720322447080018772, guid: bd649a87a87a08049a78a5d6a6dc3318,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8158465513539701263}
+    - target: {fileID: 720322447080018772, guid: bd649a87a87a08049a78a5d6a6dc3318,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShootBut
+      objectReference: {fileID: 0}
     - target: {fileID: 898163379489712685, guid: bd649a87a87a08049a78a5d6a6dc3318,
         type: 3}
       propertyPath: _bag
@@ -1919,7 +1923,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 524228292}
+      objectReference: {fileID: 0}
     - target: {fileID: 5093926824152862979, guid: bd649a87a87a08049a78a5d6a6dc3318,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2054,7 +2058,7 @@ PrefabInstance:
         type: 3}
       propertyPath: optionMenu
       value: 
-      objectReference: {fileID: 1709812447}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2144,12 +2148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1709812447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 756029303500829752, guid: bd649a87a87a08049a78a5d6a6dc3318,
-    type: 3}
-  m_PrefabInstance: {fileID: 1709812439}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1709812448 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2562278844669887297, guid: bd649a87a87a08049a78a5d6a6dc3318,
