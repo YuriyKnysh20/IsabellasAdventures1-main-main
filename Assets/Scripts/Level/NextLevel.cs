@@ -32,7 +32,7 @@ public class NextLevel : MonoBehaviour
     }
     void Next()
     {
-        SaveExperience();
+        //SaveExperience();
         SceneManager.LoadScene(currentLevel + 1);
     }
     public void SaveExperience()
