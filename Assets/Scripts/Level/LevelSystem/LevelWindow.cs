@@ -1,17 +1,16 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class LevelWindow : MonoBehaviour
 {
-    [SerializeField] private TMP_Text levelText;
+    [SerializeField] private Text levelText;
     [SerializeField] private Image experienceBarImage;
     private LevelSystem levelSystem;
 
     private void Start()
     {
-        levelText.text = "LEVEL " + (levelSystem.GetLevelNumber());
+        levelText.text = "Level " + (levelSystem.GetLevelNumber());
     }
 
     #region Save And Load Experience

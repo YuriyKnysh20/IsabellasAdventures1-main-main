@@ -1461,7 +1461,7 @@ Transform:
   m_GameObject: {fileID: 687745359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44587326, y: 1.76515, z: -30.01}
+  m_LocalPosition: {x: 0.49209023, y: 1.76523, z: -30.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1832,6 +1832,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2138509457}
+    - target: {fileID: 2154958067984422420, guid: bd649a87a87a08049a78a5d6a6dc3318,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1470157645}
+    - target: {fileID: 2154958067984422420, guid: bd649a87a87a08049a78a5d6a6dc3318,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1470157645}
+    - target: {fileID: 2154958067984422420, guid: bd649a87a87a08049a78a5d6a6dc3318,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: JButDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154958067984422420, guid: bd649a87a87a08049a78a5d6a6dc3318,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: JButUp
+      objectReference: {fileID: 0}
     - target: {fileID: 2527425647012592804, guid: bd649a87a87a08049a78a5d6a6dc3318,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1872,6 +1892,11 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1470157648}
+    - target: {fileID: 5600825003967931457, guid: bd649a87a87a08049a78a5d6a6dc3318,
+        type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6742680038022916095, guid: bd649a87a87a08049a78a5d6a6dc3318,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1990,6 +2015,11 @@ PrefabInstance:
     - target: {fileID: 7997869859978358185, guid: bd649a87a87a08049a78a5d6a6dc3318,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641431782924613377, guid: bd649a87a87a08049a78a5d6a6dc3318,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
